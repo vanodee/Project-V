@@ -16,7 +16,7 @@ export default function Header() {
               templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)', lg: 'repeat(12, 1fr)' }}
               gap={30}
               mx={'auto'}
-              p={'30px'}
+              p={'1rem'}
               alignItems={'top'}
               textColor={'highlight.2'}
           >
@@ -27,7 +27,7 @@ export default function Header() {
                       <Img
                           src={Logo}
                           alt='Little Lemon Logo'
-                          h={'100px'}
+                          h={{base:'4rem', md:'100px'}}
                       />
                   </NavLink>
               </GridItem>

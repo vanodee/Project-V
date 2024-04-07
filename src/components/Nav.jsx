@@ -29,7 +29,7 @@ export default function Nav() {
             <HStack
                 spacing={2}
                 display={{ base: "none", lg: "flex" }}
-                px={'20px'}
+                px={'15px'}
                 py={'10px'}
                 borderRadius={'10px'}
                 bgColor='rgba(0, 0, 0, 0.15)'
@@ -47,6 +47,7 @@ export default function Nav() {
                 onClick={onOpen}
                 display={{ base: "block", md: "block", lg: "none" }}
                 icon={<HamburgerIcon />}
+                size={'lg'}
             />
 
             <Drawer

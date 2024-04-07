@@ -20,8 +20,8 @@ export default function NavItem({ ...rest }) {
                         key={link.id}
                         as={NavLink}
                         to={link.path}
-                        px="1.3rem"
-                        py="0.5rem"
+                        px="1.2rem"
+                        py="0.3rem"
                         color='white'
                         textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                         borderRadius="0.3rem"

@@ -16,19 +16,17 @@ export default function RootLayout() {
                     bgGradient='linear(to-br, rgba(255,255,255,0.3), rgba(0,0,0,0.5))'
                 >
                     <Box
-                        h="65vh"
+                        h={{ base: '50vh', md: "65vh" }}
                     >
                         <Outlet />
                     </Box>
 
                     <Box
-                        bgGradient='linear(to-br, rgba(255,255,255,0.15), rgba(0,0,0,0.25))'
+                        bgGradient='linear(to-br, rgba(255,255,255,0.15), rgba(0,0,0,0.27))'
                         filter='auto'
                         blur='3px'
                         w="100%"
-                        h="35vh"
-                        // position="fixed"
-                        // zIndex={-1}
+                        h={{base:'50vh', md: "35vh"}}
                     >
                         <Text color='rgba(255,255,255,0.0)'>Floor</Text>
                     </Box>
