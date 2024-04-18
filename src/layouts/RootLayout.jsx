@@ -11,6 +11,7 @@ export default function RootLayout() {
                 as='main'
                 bg={'white'}
                 h={'100vh'}
+                zIndex={'-1'}
             >
                 <Box
                     bgGradient='linear(to-br, rgba(255,255,255,0.3), rgba(0,0,0,0.5))'
@@ -26,7 +27,8 @@ export default function RootLayout() {
                         filter='auto'
                         blur='3px'
                         w="100%"
-                        h={{base:'50vh', md: "35vh"}}
+                        h={{ base: '50vh', md: "35vh" }}
+                        pointerEvents='none'
                     >
                         <Text color='rgba(255,255,255,0.0)'>Floor</Text>
                     </Box>

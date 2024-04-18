@@ -61,8 +61,7 @@ export default function Home() {
 
 
   return (
-    <Box h={'100vh'}
-    >
+    <Box as="main" h={'100vh'} >
       {/* HERO SECTION -----------------------------*/}
       <Box
         h={{base:'57vh', md:'75vh'}}
@@ -175,20 +174,6 @@ export default function Home() {
               }
             </Box>
           </GridItem>
-
-          {/* <GridItem
-            colSpan={'2'}
-            colStart={{md:'4'}}
-          >
-            <Button
-              rightIcon={<ArrowForwardIcon />}
-              colorScheme="black"
-              variant={'text'}
-              fontSize={{lg:'2xl'}}
-            >
-              View Projects
-            </Button>
-          </GridItem> */}
 
         </Grid>
       </Box>

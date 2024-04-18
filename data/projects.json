@@ -1,0 +1,100 @@
+{
+    "front_end_projects": [
+        {
+            "id": 1,
+            "title": "Little Lemon Restaurant",
+            "previewColor": "",
+            "thumbnail": "",
+            "previewImage": "",
+            "projectSumary": "",
+            "projecyLink": ""
+        }
+    ],
+
+    "ux_case_studies": [],
+
+    "ui_designs": [],
+
+    "logo_designs": [
+        {
+            "id": 1,
+            "title": "Unity Cyber-Cafe",
+            "previewColor": "",
+            "thumbnail": "/project_previews/logo_designs/unity_cybercafe/unity_thumbnail.webp",
+            "previewImage": "/project_previews/logo_designs/unity_cybercafe/unity_12.webp",
+            "projectSumary": "",
+            "projectLink": "",
+            "projectIntro": [
+                "clientSummary",
+                "",
+                ""
+            ],
+            "projectImages": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Home-Style Doinz",
+            "previewColor": "",
+            "thumbnail": "/project_previews/logo_designs/homestyle_doinz/HomeStyle_Thumbnail.webp",
+            "previewImage": "/project_previews/logo_designs/homestyle_doinz/Homestyle_15.webp",
+            "projectSumary": "",
+            "projectLink": "",
+            "projectIntro": [
+                "clientSummary",
+                "",
+                ""
+            ],
+            "projectImages": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "id": 3,
+            "title": "ZOZAH",
+            "previewColor": "",
+            "thumbnail": "/project_previews/logo_designs/zozah/Zozah_thumbnail.webp",
+            "previewImage": "/project_previews/logo_designs/zozah/Zozah_21.webp",
+            "projectSumary": "",
+            "projectLink": "",
+            "projectIntro": [
+                "clientSummary",
+                "",
+                ""
+            ],
+            "projectImages": [
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                "",
+                ""
+            ]
+        }
+    ],
+
+    "brand_designs": []
+}
