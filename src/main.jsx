@@ -7,7 +7,7 @@ import '@fontsource/chakra-petch';
 
 // Custom Styles------------------------//
 const colors = {
-  primarye: {
+  primary: {
     1: '',
     2: ''
   },
@@ -19,7 +19,16 @@ const fonts = {
   heading: `'Chakra Petch', sans-serif`
 }
 
-const customStyles = extendTheme({ colors, fonts });
+const breakpoints = {
+  base: '0px',
+  sm: '345px',
+  md: '660px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+}
+
+const customStyles = extendTheme({ colors, fonts, breakpoints });
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

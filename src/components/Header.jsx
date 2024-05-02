@@ -1,5 +1,5 @@
 import Nav from './Nav'
-import Logo from '../assets/full_logo_black.webp'
+import Logo from '../assets/emblem_with_text.webp'
 import { Box, Grid, GridItem, Img } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
 
@@ -16,24 +16,23 @@ export default function Header() {
               templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)', lg: 'repeat(12, 1fr)' }}
               gap={30}
               mx={'auto'}
-              p={'1rem'}
+              p={'0.5rem'}
               alignItems={'top'}
-              textColor={'highlight.2'}
           >
               <GridItem
-                  colSpan={{ base: '2', md: '4', lg: '3' }}
+                  colSpan={{ base: '3', md: '4', lg: '3' }}
               >
                   <NavLink to='/'>
                       <Img
                           src={Logo}
-                          alt='Little Lemon Logo'
-                          h={{base:'4rem', md:'100px'}}
+                          alt='Stevano Peters Logo'
+                          h={{base:'3rem', lg:'4rem'}}
                       />
                   </NavLink>
               </GridItem>
 
               <GridItem as='nav'
-                  colSpan={{ base: '2', md: '4', lg: '9' }}
+                  colSpan={{ base: '1', md: '4', lg: '9' }}
                   justifySelf={'end'}
               >
                   <Nav />

@@ -28,11 +28,11 @@ export default function Nav() {
         <>
             <HStack
                 spacing={2}
-                display={{ base: "none", lg: "flex" }}
+                display={{ base: "none", md: "none", lg: "flex" }}
                 px={'15px'}
                 py={'10px'}
                 borderRadius={'10px'}
-                bgColor='rgba(0, 0, 0, 0.15)'
+                bgColor='rgba(0, 0, 0, 0.2)'
                 backdropFilter='auto'
                 backdropBlur='8px'
             >
@@ -43,11 +43,11 @@ export default function Nav() {
                 aria-label='Open Navigation'
                 ref={btnRef}
                 color='white'
-                bg='rgba(0, 0, 0, 0.1)'
+                bg='rgba(0, 0, 0, 0.2)'
                 onClick={onOpen}
                 display={{ base: "block", md: "block", lg: "none" }}
                 icon={<HamburgerIcon />}
-                size={'lg'}
+                size={{base:"md"}}
             />
 
             <Drawer
@@ -58,7 +58,7 @@ export default function Nav() {
             >
                 <DrawerOverlay />
                 <DrawerContent
-                    bg='rgba(0, 0, 0, 0.5)'
+                    bg='rgba(0, 0, 0, 0.7)'
                     backdropFilter='auto'
                     backdropBlur='8px'
                 >

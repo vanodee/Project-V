@@ -11,11 +11,15 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  useDisclosure
+  useDisclosure,
+  Heading,
+  Text,
+  Flex
 } from "@chakra-ui/react"
 
-import { Outlet } from "react-router-dom"
-import { useRef } from "react";
+import { Outlet, useLocation } from "react-router-dom"
+import { TriangleUpIcon } from "@chakra-ui/icons";
+import { useEffect, useRef, useState } from "react";
 
 
 import LogoBackdrop from '../assets/Logo_Backdrop.webp'
@@ -23,44 +27,81 @@ import ProjectCategories from "../components/ProjectCategories"
 
 
 
-export default function Projects() {
+export default function ProjectsLayout() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
 
+  const [currentProjectCategory, setCurrentProjectCategory] = useState(null)
+  const location = useLocation()
+
+  useEffect(() => {
+    const pathParts = location.pathname.split("/");     // Split the Pathname at each "/"
+    const lastPart = pathParts[pathParts.length - 1];   // Returns the last word in the path
+    const formattedName = lastPart.replace(/_/g, " ");  // Replace underscores with spaces
+
+    setCurrentProjectCategory(formattedName)
+  },[location])
+
   return (
-    <Box as="main" h='100vh' >
+    <Box h='100vh'>
 
       <Image
         src={LogoBackdrop}
-        h={{ base: '45vh', md: '60vh' }}
+        h={{ base: '40vh', md: '60vh' }}
         position="fixed"
         top="50%"
         left="50%"
         transform={{ base: "translate(-50%, -88%)", md: "translate(-50%, -63%)" }}
         filter='auto'
-        blur='4px'
+        blur='7px'
       />
 
+      <Outlet />
+
+      {currentProjectCategory === "Projects" && (
+        <Flex
+          position="fixed"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
+          bg='rgba(0,0,0,0.15)'
+          backdropFilter='auto'
+          backdropBlur='15px'
+          borderRadius="1rem"
+          p="1rem"
+          mx="auto"
+          textColor="white"
+          textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+        >
+          <Heading
+            size={{ base: "lg" }}
+            textAlign="center"
+          >
+            Please select a category below
+          </Heading>
+
+        </Flex>
+      )}
 
       <VStack
         zIndex="800"
-        h="100vh"
-        pb='4rem'
-        display='flex'
+        pb='2.5rem'
         alignItems='center'
-        justifyContent='flex-end'
+        justifyContent='center'
+        position="fixed"
+        top="88.5%"
+        left="50%"
+        transform="translate(-50%, 0)"
       >
-
-        <Outlet />
-
         <Stack
-          display={{base:'none', lg:'flex'}}
+          display={{ base: 'none', lg: 'flex' }}
+          minW='800px'
           direction='row'
           spacing={2}
           px={'15px'}
           py={'10px'}
           borderRadius={'10px'}
-          bgColor='rgba(0, 0, 0, 0.15)'
+          bgColor='rgba(0, 0, 0, 0.2)'
           backdropFilter='auto'
           backdropBlur='8px'
         >
@@ -75,9 +116,10 @@ export default function Projects() {
           bg='rgba(0, 0, 0, 0.1)'
           display={{ base: "flex", lg: "none" }}
           textShadow='0px 2px rgba(0, 0, 0, 0.8)'
-          size={'lg'}
+          size={{ base: 'md', lg: 'lg' }}
+          rightIcon={<TriangleUpIcon />}
         >
-          Random Bullshit Go!
+          {currentProjectCategory === "Projects" ? "Select Project Category" : `${currentProjectCategory}` }
         </Button>
 
         <Drawer
@@ -88,7 +130,7 @@ export default function Projects() {
         >
           <DrawerOverlay />
           <DrawerContent
-            bg='rgba(0, 0, 0, 0.5)'
+            bg='rgba(0, 0, 0, 0.7)'
             backdropFilter='auto'
             backdropBlur='8px'
           >
@@ -107,7 +149,6 @@ export default function Projects() {
 
           </DrawerContent>
         </Drawer>
-
 
       </VStack>
 

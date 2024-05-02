@@ -61,7 +61,7 @@ export default function Home() {
 
 
   return (
-    <Box as="main" h={'100vh'} >
+    <Box h={'100vh'} >
       {/* HERO SECTION -----------------------------*/}
       <Box
         h={{base:'57vh', md:'75vh'}}
@@ -71,7 +71,7 @@ export default function Home() {
       >
         <Image
           src={HeroImage}
-          h={{base:'45vh', md:'60vh'}}
+          h={{base:'40vh', md:'60vh'}}
         />
       </Box>
 
@@ -83,8 +83,8 @@ export default function Home() {
         justifyContent={'center'}
       >
         <Grid
-          templateColumns={{ sm: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
-          w={{sm:'500px', md:'700px', lg:'800px'}}
+          templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
+          w={{base:'500px', md:'700px', lg:'800px'}}
           gap={'1rem'}
           px={'1rem'}
           alignItems={'center'}
@@ -101,11 +101,11 @@ export default function Home() {
               justifyContent={'center'}
             >
               <Heading
-                size={'sm'}
+                fontSize={{base:"0.7rem", lg:"1rem"}}
                 color={'white'}
                 textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 transform='rotate(-90deg)'
-                mx='-2rem'
+                mx='-1.5rem'
               >
                 CERTIFIED
               </Heading>
@@ -116,6 +116,7 @@ export default function Home() {
                     <Image
                       key={certifiedLogo.id}
                       src={certifiedLogo.logo}
+                      h={{ base: "1.5rem", lg: "2rem" }}
                     />
                   ))
                 }
@@ -127,6 +128,7 @@ export default function Home() {
             colSpan={{ base: '3' }}
             borderRadius={'20px'}
             bgColor='rgba(0, 0, 0, 0.5)'
+            py="0.5rem"
             h='100%'
           >
             <Box
@@ -168,7 +170,8 @@ export default function Home() {
                   <Image
                     key={toolkitLogo.id}
                     src={toolkitLogo.logo}
-                    px={{ base: '0.2rem', md: '0.5rem', lg: '1rem' }}
+                    h={{ base: "1.5rem", lg:"2rem" }}
+                    px={{ base: '0.2rem', lg: '1rem' }}
                   />
                 ))
               }

@@ -2,16 +2,44 @@
     "front_end_projects": [
         {
             "id": 1,
-            "title": "Little Lemon Restaurant",
-            "previewColor": "",
-            "thumbnail": "",
-            "previewImage": "",
-            "projectSumary": "",
-            "projecyLink": ""
+            "title": "Little Lemon",
+            "previewColor": "rgba(244, 205, 21, 0.3)",
+            "thumbnail": "/project_previews/front_end_projects/little_lemon/little_lemon_thumbnail.webp",
+            "previewImage": "/project_previews/front_end_projects/little_lemon/little_lemon_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
         }
     ],
 
-    "ux_case_studies": [],
+    "ux_case_studies": [
+        {
+            "id": 1,
+            "title": "Vee Cinemas",
+            "previewColor": "rgba(57, 217, 54, 0.3)",
+            "thumbnail": "/project_previews/ux_case_studies/v_cinemas/v_cinemas_thumbnail.webp",
+            "previewImage": "/project_previews/ux_case_studies/v_cinemas/v_cinemas_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 2,
+            "title": "Stella's Garage",
+            "previewColor": "rgba(254, 226, 100, 0.3)",
+            "thumbnail": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_thumbnail.webp",
+            "previewImage": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 3,
+            "title": "Dr. Notii",
+            "previewColor": "rgba(168, 19, 155, 0.3)",
+            "thumbnail": "/project_previews/ux_case_studies/dr_notii/dr_notii_thumbnail.webp",
+            "previewImage": "/project_previews/ux_case_studies/dr_notii/dr_notii_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        }
+    ],
 
     "ui_designs": [],
 
@@ -19,82 +47,68 @@
         {
             "id": 1,
             "title": "Unity Cyber-Cafe",
-            "previewColor": "",
+            "previewColor": "rgba(12, 29, 64, 0.3)",
             "thumbnail": "/project_previews/logo_designs/unity_cybercafe/unity_thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/unity_cybercafe/unity_12.webp",
-            "projectSumary": "",
-            "projectLink": "",
-            "projectIntro": [
-                "clientSummary",
-                "",
-                ""
-            ],
-            "projectImages": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
+            "projectSummary": "",
+            "projectLink": ""
         },
         {
             "id": 2,
             "title": "Home-Style Doinz",
-            "previewColor": "",
+            "previewColor": "rgba(192, 53, 4, 0.3)",
             "thumbnail": "/project_previews/logo_designs/homestyle_doinz/HomeStyle_Thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/homestyle_doinz/Homestyle_15.webp",
-            "projectSumary": "",
-            "projectLink": "",
-            "projectIntro": [
-                "clientSummary",
-                "",
-                ""
-            ],
-            "projectImages": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
+            "projectSummary": "Homestyle Doinz is a premium food brand that brings the essence of homemade goodness to every plate. Established in 2023, we are passionate about providing delicious, healthy, and authentic home-cooked meals and beverages. Rooted in the heart of Lagos, Nigeria, our brand combines the warmth of homemade flavors with a touch of culinary excellence, serving up memorable dining experiences that celebrate the rich cultural heritage of Nigerian cuisine.",
+            "projectLink": ""
         },
         {
             "id": 3,
             "title": "ZOZAH",
-            "previewColor": "",
+            "previewColor": "rgba(0, 64, 64, 0.3)",
             "thumbnail": "/project_previews/logo_designs/zozah/Zozah_thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/zozah/Zozah_21.webp",
-            "projectSumary": "",
-            "projectLink": "",
-            "projectIntro": [
-                "clientSummary",
-                "",
-                ""
-            ],
-            "projectImages": [
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                "",
-                ""
-            ]
+            "projectSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 4,
+            "title": "ChopAm",
+            "previewColor": "rgba(242, 92, 5, 0.3)",
+            "thumbnail": "/project_previews/logo_designs/chopam/chopam_thumbnail.webp",
+            "previewImage": "/project_previews/logo_designs/chopam/chopam_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
         }
     ],
 
-    "brand_designs": []
+    "brand_designs": [
+        {
+            "id": 1,
+            "title": "DSTV & GOTV",
+            "previewColor": "rgba(22, 69, 193, 0.3)",
+            "thumbnail": "/project_previews/brand_designs/dstv/dstv_thumbnail.webp",
+            "previewImage": "/project_previews/brand_designs/dstv/dstv_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 2,
+            "title": "JANETTOTTY",
+            "previewColor": "rgba(243, 203, 154, 0.3)",
+            "thumbnail": "/project_previews/brand_designs/janettotty/janettotty_thumbnail.webp",
+            "previewImage": "/project_previews/brand_designs/janettotty/janettotty_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 3,
+            "title": "Siblings Laundromat",
+            "previewColor": "rgba(60, 166, 166, 0.3)",
+            "thumbnail": "/project_previews/brand_designs/siblings/siblings_thumbnail.webp",
+            "previewImage": "/project_previews/brand_designs/siblings/siblings_preview.webp",
+            "projectSummary": "",
+            "projectLink": ""
+        }
+    ]
 }
