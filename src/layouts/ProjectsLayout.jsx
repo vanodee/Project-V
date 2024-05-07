@@ -13,7 +13,6 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Heading,
-  Text,
   Flex
 } from "@chakra-ui/react"
 
@@ -31,34 +30,43 @@ export default function ProjectsLayout() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
 
-  const [currentProjectCategory, setCurrentProjectCategory] = useState(null)
+  const [currentPage, setCurrentPage] = useState(null)
+  const [pathArraySize, setpathArraySize] = useState(null)
   const location = useLocation()
 
-  useEffect(() => {
-    const pathParts = location.pathname.split("/");     // Split the Pathname at each "/"
-    const lastPart = pathParts[pathParts.length - 1];   // Returns the last word in the path
-    const formattedName = lastPart.replace(/_/g, " ");  // Replace underscores with spaces
 
-    setCurrentProjectCategory(formattedName)
+  //TRACKS THE TITLE OF THE CURRENT WEBPAGE
+  useEffect(() => {
+    const pathParts = location.pathname.split("/")        // Return the path as an array removing the "/"
+      .filter(pathPart => pathPart !== '');               // Filter out all empty strings and spaces from the array
+    const lastPart = pathParts[pathParts.length - 1];     // Return the last item in the array (array.length - 1)
+    const formattedName = lastPart.replace(/_/g, " ");    // Replace underscores with spaces
+
+    setCurrentPage(formattedName)
+    setpathArraySize(pathParts.length)    // This stores the length of the path array
+    // console.log( "Parent: ", formattedName)
   },[location])
+
 
   return (
     <Box h='100vh'>
 
-      <Image
-        src={LogoBackdrop}
-        h={{ base: '40vh', md: '60vh' }}
-        position="fixed"
-        top="50%"
-        left="50%"
-        transform={{ base: "translate(-50%, -88%)", md: "translate(-50%, -63%)" }}
-        filter='auto'
-        blur='7px'
-      />
+      {pathArraySize < 3 && (
+        <Image
+          src={LogoBackdrop}
+          h={{ base: '40vh', md: '60vh' }}
+          position="fixed"
+          top="50%"
+          left="50%"
+          transform={{ base: "translate(-50%, -88%)", md: "translate(-50%, -63%)" }}
+          filter='auto'
+          blur='7px'
+        />
+      )}
 
-      <Outlet />
+      <Outlet context={[pathArraySize]} />
 
-      {currentProjectCategory === "Projects" && (
+      {currentPage === "Projects" && (
         <Flex
           position="fixed"
           top="50%"
@@ -83,74 +91,76 @@ export default function ProjectsLayout() {
         </Flex>
       )}
 
-      <VStack
-        zIndex="800"
-        pb='2.5rem'
-        alignItems='center'
-        justifyContent='center'
-        position="fixed"
-        top="88.5%"
-        left="50%"
-        transform="translate(-50%, 0)"
-      >
-        <Stack
-          display={{ base: 'none', lg: 'flex' }}
-          minW='800px'
-          direction='row'
-          spacing={2}
-          px={'15px'}
-          py={'10px'}
-          borderRadius={'10px'}
-          bgColor='rgba(0, 0, 0, 0.2)'
-          backdropFilter='auto'
-          backdropBlur='8px'
+      {pathArraySize < 3 && (
+        <VStack
+          zIndex="800"
+          pb='2.5rem'
+          alignItems='center'
+          justifyContent='center'
+          position="fixed"
+          top="88.5%"
+          left="50%"
+          transform="translate(-50%, 0)"
         >
-          <ProjectCategories />
-        </Stack>
-
-        <Button
-          aria-label='Open Navigation'
-          ref={btnRef}
-          onClick={onOpen}
-          color='white'
-          bg='rgba(0, 0, 0, 0.1)'
-          display={{ base: "flex", lg: "none" }}
-          textShadow='0px 2px rgba(0, 0, 0, 0.8)'
-          size={{ base: 'md', lg: 'lg' }}
-          rightIcon={<TriangleUpIcon />}
-        >
-          {currentProjectCategory === "Projects" ? "Select Project Category" : `${currentProjectCategory}` }
-        </Button>
-
-        <Drawer
-          isOpen={isOpen}
-          placement='bottom'
-          onClose={onClose}
-          finalFocusRef={btnRef}
-        >
-          <DrawerOverlay />
-          <DrawerContent
-            bg='rgba(0, 0, 0, 0.7)'
+          <Stack
+            display={{ base: 'none', lg: 'flex' }}
+            minW='800px'
+            direction='row'
+            spacing={2}
+            px={'15px'}
+            py={'10px'}
+            borderRadius={'10px'}
+            bgColor='rgba(0, 0, 0, 0.2)'
             backdropFilter='auto'
             backdropBlur='8px'
           >
+            <ProjectCategories />
+          </Stack>
 
-            <DrawerCloseButton color='white' h='30px' />
-            <DrawerHeader color='white'>Select Project Category</DrawerHeader>
+          <Button
+            aria-label='Open Navigation'
+            ref={btnRef}
+            onClick={onOpen}
+            color='white'
+            bg='rgba(0, 0, 0, 0.1)'
+            display={{ base: "flex", lg: "none" }}
+            textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+            size={{ base: 'md', lg: 'lg' }}
+            rightIcon={<TriangleUpIcon />}
+          >
+            {currentPage === "Projects" ? "Select Project Category" : `${currentPage}`}
+          </Button>
 
-            <DrawerBody pt='1.5rem'>
-              <VStack spacing="1.5rem">
-                <ProjectCategories onClick={onClose} />
-              </VStack>
-            </DrawerBody>
+          <Drawer
+            isOpen={isOpen}
+            placement='bottom'
+            onClose={onClose}
+            finalFocusRef={btnRef}
+          >
+            <DrawerOverlay />
+            <DrawerContent
+              bg='rgba(0, 0, 0, 0.7)'
+              backdropFilter='auto'
+              backdropBlur='8px'
+            >
 
-            <DrawerFooter>
-            </DrawerFooter>
+              <DrawerCloseButton color='white' h='30px' />
+              <DrawerHeader color='white'>Select Project Category</DrawerHeader>
 
-          </DrawerContent>
-        </Drawer>
+              <DrawerBody pt='1.5rem'>
+                <VStack spacing="1.5rem">
+                  <ProjectCategories onClick={onClose} />
+                </VStack>
+              </DrawerBody>
 
-      </VStack>
+              <DrawerFooter>
+              </DrawerFooter>
+
+            </DrawerContent>
+          </Drawer>
+
+        </VStack>
+      )}
 
 
     </Box>

@@ -24,6 +24,7 @@ import ProjectPreview, {
   ui_designs_loader,
   ux_case_studies_loader
 } from './components/ProjectPreview';
+import LogoDesignProjects from './layouts/LogoDesignProjects';
 
 
 
@@ -32,12 +33,15 @@ const router = createBrowserRouter(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
 
-      <Route path='Projects' element={<ProjectsLayout />}
-      >
+      <Route path='Projects' element={<ProjectsLayout />}>
         <Route path='Front_End_Projects' element={<ProjectPreview />} loader={front_end_projects_loader} />
         <Route path='UX_Case_Studies' element={<ProjectPreview />} loader={ux_case_studies_loader} />
         <Route path='UI_Designs' element={<ProjectPreview />} loader={ui_designs_loader} />
-        <Route path='Logo_Designs' element={<ProjectPreview />} loader={logo_designs_loader} />
+
+        <Route path='Logo_Designs' element={<ProjectPreview />} loader={logo_designs_loader}>
+          <Route path=':projectTitle' element={<LogoDesignProjects />} />
+        </Route>
+
         <Route path='Brand_Designs' element={<ProjectPreview />} loader={brand_designs_loader} />
       </Route>
 
