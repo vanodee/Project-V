@@ -109,7 +109,7 @@ export default function ProjectPreview() {
                   </Text>
                 </Box>
 
-                <Link to={selectedProject.pathName} w="100%">
+                <Link to={selectedProject.id} w="100%">
                   <Button
                     w="100%"
                     variant="outline"

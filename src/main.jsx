@@ -5,7 +5,7 @@ import App from './App.jsx'
 import '@fontsource/chakra-petch';
 
 
-// Custom Styles------------------------//
+// Custom Styles ------------------------ //
 const colors = {
   primary: {
     1: '',
@@ -28,7 +28,28 @@ const breakpoints = {
   '2xl': '1536px',
 }
 
-const customStyles = extendTheme({ colors, fonts, breakpoints });
+const customStyles = extendTheme({
+  colors,
+  fonts,
+  breakpoints,
+  styles: {
+    global: {
+      //Custom Scrollbar ------------------ //
+      "::-webkit-scrollbar": {
+        width: "8px",
+        height: "8px",
+      },
+      "::-webkit-scrollbar-thumb": {
+        backgroundColor: "rgba(0,0,0,0.5)",
+        borderRadius: "full",
+        width: "8px"
+      },
+      "::-webkit-scrollbar-track": {
+        backgroundColor: "rgba(0,0,0,0.3)",
+      },
+    },
+  },
+});
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

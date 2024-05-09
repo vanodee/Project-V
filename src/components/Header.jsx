@@ -16,7 +16,7 @@ export default function Header() {
               templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)', lg: 'repeat(12, 1fr)' }}
               gap={30}
               mx={'auto'}
-              p={'0.5rem'}
+              p={'0.7rem'}
               alignItems={'top'}
           >
               <GridItem

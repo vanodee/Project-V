@@ -7,7 +7,7 @@
             "previewColor": "rgba(244, 205, 21, 0.3)",
             "thumbnail": "/project_previews/front_end_projects/little_lemon/little_lemon_thumbnail.webp",
             "previewImage": "/project_previews/front_end_projects/little_lemon/little_lemon_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         }
     ],
@@ -20,7 +20,7 @@
             "previewColor": "rgba(57, 217, 54, 0.3)",
             "thumbnail": "/project_previews/ux_case_studies/v_cinemas/v_cinemas_thumbnail.webp",
             "previewImage": "/project_previews/ux_case_studies/v_cinemas/v_cinemas_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         },
         {
@@ -30,7 +30,7 @@
             "previewColor": "rgba(254, 226, 100, 0.3)",
             "thumbnail": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_thumbnail.webp",
             "previewImage": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         },
         {
@@ -40,7 +40,7 @@
             "previewColor": "rgba(168, 19, 155, 0.3)",
             "thumbnail": "/project_previews/ux_case_studies/dr_notii/dr_notii_thumbnail.webp",
             "previewImage": "/project_previews/ux_case_studies/dr_notii/dr_notii_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         }
     ],
@@ -55,8 +55,24 @@
             "previewColor": "rgba(12, 29, 64, 0.3)",
             "thumbnail": "/project_previews/logo_designs/unity_cybercafe/unity_thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/unity_cybercafe/unity_12.webp",
-            "projectSummary": "",
-            "projectLink": ""
+            "previewSummary": "",
+            "projectHero": "/project_previews/logo_designs/unity_cybercafe/unity_1.webp",
+            "projectClient": "We are Unity CyberCafe, a small business located in the vibrant city of Lagos, Nigeria. Established in 2023, we take pride in offering a diverse range of services to meet the needs of our customers. Whether you're seeking reliable internet access, efficient photocopying, professional binding and scanning, high-quality passport photography, NIN Enrollment, Online Passport application, Notary public assistance or convenient POS services, we've got you covered.",
+            "projectJob": "Logo Design.",
+            "projectKeywords": "Unity, Professionalism, Convenience. ",
+            "projectImages": [
+                "/project_previews/logo_designs/unity_cybercafe/unity_2.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_3.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_4.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_5.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_6.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_7.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_8.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_9.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_10.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_11.webp",
+                "/project_previews/logo_designs/unity_cybercafe/unity_12.webp"
+            ]
         },
         {
             "id": 2,
@@ -65,8 +81,27 @@
             "previewColor": "rgba(192, 53, 4, 0.3)",
             "thumbnail": "/project_previews/logo_designs/homestyle_doinz/HomeStyle_Thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/homestyle_doinz/Homestyle_15.webp",
-            "projectSummary": "Homestyle Doinz is a premium food brand that brings the essence of homemade goodness to every plate. Established in 2023, we are passionate about providing delicious, healthy, and authentic home-cooked meals and beverages. Rooted in the heart of Lagos, Nigeria, our brand combines the warmth of homemade flavors with a touch of culinary excellence, serving up memorable dining experiences that celebrate the rich cultural heritage of Nigerian cuisine.",
-            "projectLink": ""
+            "previewSummary": "Homestyle Doinz is a premium food brand that brings the essence of homemade goodness to every plate. Established in 2023, we are passionate about providing delicious, healthy, and authentic home-cooked meals and beverages. Rooted in the heart of Lagos, Nigeria, our brand combines the warmth of homemade flavors with a touch of culinary excellence, serving up memorable dining experiences that celebrate the rich cultural heritage of Nigerian cuisine.",
+            "projectHero": "/project_previews/logo_designs/homestyle_doinz/Homestyle_1.webp",
+            "projectClient": "Homestyle Doinz is a premium food brand that brings the essence of homemade goodness to every plate. Established in 2023, we are passionate about providing delicious, healthy, and authentic home-cooked meals and beverages. Rooted in the heart of Lagos, Nigeria, our brand combines the warmth of homemade flavors with a touch of culinary excellence, serving up memorable dining experiences that celebrate the rich cultural heritage of Nigerian cuisine.",
+            "projectKeywords": "At Homestyle Doinz, our goal is to evoke the comforting feeling of home, delivering a taste of authenticity and craftsmanship in every bite or sip.",
+            "projectJob": "Brand Identity Design.",
+            "projectImages": [
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_2.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_3.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_4.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_5.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_6.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_7.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_8.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_9.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_10.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_11.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_12.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_13.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_14.webp",
+                "/project_previews/logo_designs/homestyle_doinz/Homestyle_15.webp"
+            ]
         },
         {
             "id": 3,
@@ -75,8 +110,32 @@
             "previewColor": "rgba(0, 64, 64, 0.3)",
             "thumbnail": "/project_previews/logo_designs/zozah/Zozah_thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/zozah/Zozah_21.webp",
-            "projectSummary": "",
-            "projectLink": ""
+            "previewSummary": "",
+            "projectHero": "/project_previews/logo_designs/zozah/Zozah_1.webp",
+            "projectClient": "",
+            "projectJob": "",
+            "projectKeywords": "",
+            "projectImages": [
+                "/project_previews/logo_designs/zozah/Zozah_5.webp",
+                "/project_previews/logo_designs/zozah/Zozah_4.webp",
+                "/project_previews/logo_designs/zozah/Zozah_6.webp",
+                "/project_previews/logo_designs/zozah/Zozah_7.webp",
+                "/project_previews/logo_designs/zozah/Zozah_8.webp",
+                "/project_previews/logo_designs/zozah/Zozah_9.webp",
+                "/project_previews/logo_designs/zozah/Zozah_10.webp",
+                "/project_previews/logo_designs/zozah/Zozah_11.webp",
+                "/project_previews/logo_designs/zozah/Zozah_12.webp",
+                "/project_previews/logo_designs/zozah/Zozah_13.webp",
+                "/project_previews/logo_designs/zozah/Zozah_14.webp",
+                "/project_previews/logo_designs/zozah/Zozah_15.webp",
+                "/project_previews/logo_designs/zozah/Zozah_16.webp",
+                "/project_previews/logo_designs/zozah/Zozah_17.webp",
+                "/project_previews/logo_designs/zozah/Zozah_18.webp",
+                "/project_previews/logo_designs/zozah/Zozah_19.webp",
+                "/project_previews/logo_designs/zozah/Zozah_20.webp",
+                "/project_previews/logo_designs/zozah/Zozah_21.webp",
+                "/project_previews/logo_designs/zozah/Zozah_22.webp"
+            ]
         },
         {
             "id": 4,
@@ -85,8 +144,27 @@
             "previewColor": "rgba(242, 92, 5, 0.3)",
             "thumbnail": "/project_previews/logo_designs/chopam/chopam_thumbnail.webp",
             "previewImage": "/project_previews/logo_designs/chopam/chopam_preview.webp",
-            "projectSummary": "",
-            "projectLink": ""
+            "previewSummary": "",
+            "projectHero": "/project_previews/logo_designs/chopam/ChopAm_1.webp",
+            "projectClient": "",
+            "projectJob": "",
+            "projectKeywords": "",
+            "projectImages": [
+                "/project_previews/logo_designs/chopam/ChopAm_6.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_5.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_7.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_8.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_9.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_10.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_11.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_12.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_13.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_14.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_15.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_16.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_17.webp",
+                "/project_previews/logo_designs/chopam/ChopAm_18.webp"
+            ]
         }
     ],
 
@@ -98,7 +176,7 @@
             "previewColor": "rgba(22, 69, 193, 0.3)",
             "thumbnail": "/project_previews/brand_designs/dstv/dstv_thumbnail.webp",
             "previewImage": "/project_previews/brand_designs/dstv/dstv_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         },
         {
@@ -108,7 +186,7 @@
             "previewColor": "rgba(243, 203, 154, 0.3)",
             "thumbnail": "/project_previews/brand_designs/janettotty/janettotty_thumbnail.webp",
             "previewImage": "/project_previews/brand_designs/janettotty/janettotty_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         },
         {
@@ -118,7 +196,7 @@
             "previewColor": "rgba(60, 166, 166, 0.3)",
             "thumbnail": "/project_previews/brand_designs/siblings/siblings_thumbnail.webp",
             "previewImage": "/project_previews/brand_designs/siblings/siblings_preview.webp",
-            "projectSummary": "",
+            "previewSummary": "",
             "projectLink": ""
         }
     ]
