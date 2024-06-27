@@ -104,11 +104,11 @@ export default function ProjectsLayout() {
         >
           <Stack
             display={{ base: 'none', lg: 'flex' }}
-            justifyContent="center"
+            justifyContent="space-between"
             minW="800px"
             direction='row'
             spacing={2}
-            py='0.5rem'
+            p='0.5rem'
             borderRadius='0.5rem'
             bgColor='rgba(0, 0, 0, 0.2)'
             backdropFilter='auto'

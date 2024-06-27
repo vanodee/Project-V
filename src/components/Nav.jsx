@@ -47,7 +47,7 @@ export default function Nav() {
                 onClick={onOpen}
                 display={{ base: "block", md: "block", lg: "none" }}
                 icon={<HamburgerIcon />}
-                size={{base:"md"}}
+                size={{ base: "sm", md: "md" }}
             />
 
             <Drawer

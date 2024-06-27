@@ -12,7 +12,8 @@ export default function Header() {
             width="100%"
             zIndex="999"
             h="7dvh"
-            p='0.5rem'
+            py='0.5rem'
+            px="1rem"
             display="flex"
             justifyContent="space-between"
             // bg="pink"
@@ -21,7 +22,7 @@ export default function Header() {
                 <Img
                     src={Logo}
                     alt='Stevano Peters Logo'
-                    h={{ base: '100%', md: '2.5rem', lg: '4rem' }}
+                    h={{ base: '100%', md: '2.5rem', lg: '3rem' }}
                 />
             </NavLink>
 

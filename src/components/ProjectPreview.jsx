@@ -6,7 +6,8 @@ import {
   Stack,
   Button,
   Text,
-  Box
+  Box,
+  useMediaQuery
 } from "@chakra-ui/react";
 
 import { ArrowForwardIcon } from "@chakra-ui/icons"
@@ -17,6 +18,10 @@ import { useEffect, useState } from 'react';
 
 
 export default function ProjectPreview() {
+
+  const [isPortrait] = useMediaQuery("(orientation: portrait)");
+  const [isLandscape] = useMediaQuery("(orientation: landscape)");
+
   const location = useLocation();
   const projects = useLoaderData();
   const [selectedProject, setSelectedProject] = useState(null);
@@ -60,8 +65,13 @@ export default function ProjectPreview() {
               <Stack
                 h="100%"
                 w="95%"
-                maxW="1200px"
-                direction={{ base: "column", md: "row" }}
+                maxW={{
+                  base: "700px",
+                  md: (isPortrait ? "600px" : "700px"),
+                  lg: (isPortrait ? "700px" : "900px"),
+                  xl: "1200px"
+                }}
+                direction={isPortrait ? "column" : "row"}
                 spacing="1rem"
                 bgGradient='linear(to-br, rgba(0,0,0,0.05), rgba(0,0,0,0.85))'
                 backdropFilter='auto'
@@ -73,8 +83,8 @@ export default function ProjectPreview() {
                 <Image
                   src={selectedProject.previewImage}
                   alt={`${selectedProject.title} Thumbnail`}
-                  w={{ base: "100%", md: "65%" }}
-                  h={{ base: "45%", md: "100%" }}
+                  w={isPortrait ? "100%" : "65%"}
+                  h={isPortrait ? "45%" : "100%"}
                   objectFit="cover"
                   borderRadius="0.5rem"
                 />
@@ -83,31 +93,40 @@ export default function ProjectPreview() {
                   display="flex"
                   flexDirection="column"
                   justifyContent="space-between"
-                  w={{ base: "100%", md: "35%" }}
-                  h={{base:"50%", md:"100%"}}
+                  w={isPortrait ? "100%" : "35%"}
+                  h={isPortrait ? "50%" : "100%"}
                   color="white"
                   textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                   p={{ base: "", lg: "0.5rem" }}
                   // bg="pink"
                 >
                   <Heading
-                    fontSize={{ base: "2xl", lg: "4xl" }}
+                    fontSize={{
+                      base: "1.5rem",
+                      md: (isPortrait ? "2rem" : "1.5rem"),
+                      lg: "2rem"
+                    }}
                     alignSelf="flex-start"
-                    pb="0.5rem"
+                    pb="0.3rem"
                     // bg="red"
                   >
                     {selectedProject.title}
                   </Heading>
 
                   <Box
-                    display={{ base: "flex", lg: "flex" }}
+                    display="flex"
                     overflow="hidden"
                     overflowY="scroll"
+                    py="0.5rem"
                     // bg="blue"
                   >
                     <Text
                       as="p"
-                      fontSize={{ base: "sm", lg: "lg" }}
+                      fontSize={{
+                        base: "sm",
+                        md: (isPortrait ? "md" : "sm"),
+                        lg: "md"
+                      }}
                     >
                       {selectedProject.previewSummary}
                     </Text>
@@ -120,7 +139,11 @@ export default function ProjectPreview() {
                     <Button
                       w="100%"
                       variant="outline"
-                      size={{ base: "sm", lg: "md", xl: "lg" }}
+                      size={{
+                        base: "sm",
+                        md: (isPortrait ? "lg" : "sm"),
+                        lg: "lg"
+                      }}
                       colorScheme="white"
                       rightIcon={<ArrowForwardIcon />}
                       mt="0.7rem"
