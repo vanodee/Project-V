@@ -1,4 +1,4 @@
-import { Box, Button, Grid, GridItem, HStack, Text, Image, VStack, Heading, Img } from "@chakra-ui/react"
+import { Box, Button, Grid, GridItem, HStack, Text, Image, VStack, Heading } from "@chakra-ui/react"
 import HeroImage from '../assets/hero_image.webp'
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 
@@ -61,23 +61,23 @@ export default function Home() {
 
 
   return (
-    <Box h={'100vh'} >
+    <Box h={'100dvh'} >
       {/* HERO SECTION -----------------------------*/}
       <Box
-        h={{base:'57vh', md:'75vh'}}
+        h={{base:'57dvh', md:'75dvh'}}
         display={'flex'}
         alignItems={'end'}
         justifyContent={'center'}
       >
         <Image
           src={HeroImage}
-          h={{base:'40vh', md:'60vh'}}
+          h={{base:'40dvh', md:'60dvh'}}
         />
       </Box>
 
       {/* INFO SECTION -----------------------------*/}
       <Box
-        h={{base:'43vh', md:'25vh'}}
+        h={{base:'43dvh', md:'25dvh'}}
         display={'flex'}
         alignItems={'center'}
         justifyContent={'center'}

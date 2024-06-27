@@ -21,7 +21,7 @@ export default function ProjectPreview() {
   const projects = useLoaderData();
   const [selectedProject, setSelectedProject] = useState(null);
   const [previewColor, setPreviewColor] = useState(null);
-  const [pathArraySize] = useOutletContext();
+  const [pathArraySize, currentPage] = useOutletContext();
 
   useEffect(() => {
     setSelectedProject(null);
@@ -40,96 +40,106 @@ export default function ProjectPreview() {
 
       {pathArraySize < 3 && (
         <VStack
-          spacing={{ base: "1rem", lg: "2rem" }}
-          h={'100vh'}
-          py={{ base: "10vh" }}
+          spacing="0"
+          h={'100dvh'}
+          py={{ base: "10dvh" }}
           display="flex"
           alignContent='center'
           justifyContent="flex-end"
           bg={previewColor}
         >
           {selectedProject && (
-            <Stack
-              h={'50vh'}
-              w={{ base: '90%' }}
-              maxW="1040px"
-              direction={{ base: "column", md: "row" }}
-              spacing={4}
-              bgGradient='linear(to-br, rgba(0,0,0,0.05), rgba(0,0,0,0.85))'
-              backdropFilter='auto'
-              backdropBlur='8px'
-              borderRadius="1.5rem"
-              p="0.5rem"
-              mx="1rem"
+            <Box
+              h='75%'
+              w="100dvw"
+              display="flex"
+              alignContent='center'
+              justifyContent="center"
+              py="1rem"
             >
-              <Image
-                src={selectedProject.previewImage}
-                alt={`${selectedProject.title} Thumbnail`}
-                w={{ base: "100%", md: "65%" }}
-                h={{ base: "30vh", md: "100%" }}
-                objectFit="cover"
+              <Stack
+                h="100%"
+                w="95%"
+                maxW="1200px"
+                direction={{ base: "column", md: "row" }}
+                spacing="1rem"
+                bgGradient='linear(to-br, rgba(0,0,0,0.05), rgba(0,0,0,0.85))'
+                backdropFilter='auto'
+                backdropBlur='8px'
                 borderRadius="1rem"
-              />
-
-              <Box
-                display="flex"
-                flexDirection="column"
-                justifyContent="center"
-                w={{ base: "100%", md: "35%" }}
-                h={{ base: "15vh", md: "100%" }}
-                color="white"
-                textShadow='0px 2px rgba(0, 0, 0, 0.8)'
-                px={{ base: "", lg: "1rem" }}
+                p="0.5rem"
+                mx="1rem"
               >
-                <Heading
-                  fontSize={{ base: "2xl", lg: "4xl" }}
-                  pb="1rem"
-                >
-                  {selectedProject.title}
-                </Heading>
+                <Image
+                  src={selectedProject.previewImage}
+                  alt={`${selectedProject.title} Thumbnail`}
+                  w={{ base: "100%", md: "65%" }}
+                  h={{ base: "45%", md: "100%" }}
+                  objectFit="cover"
+                  borderRadius="0.5rem"
+                />
 
                 <Box
-                  display={{ base: "none", lg: "flex" }}
-                  maxH={{ lg: "10rem" }}
-                  overflow="hidden"
-                  my="1.5rem"
+                  display="flex"
+                  flexDirection="column"
+                  justifyContent="space-between"
+                  w={{ base: "100%", md: "35%" }}
+                  h={{base:"50%", md:"100%"}}
+                  color="white"
+                  textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                  p={{ base: "", lg: "0.5rem" }}
+                  // bg="pink"
                 >
-                  <Text
-                    as="p"
-                    fontSize={{ base: "sm", lg: "xl" }}
-                    display=""
-                    css={{// Old Skool CSS not sure if i'll keep it in
-                      display: "-webkit-box",
-                      WebkitLineClamp: 5, // Change this value to control the number of lines
-                      WebkitBoxOrient: "vertical",
-                      overflow: "hidden",
-                    }}
+                  <Heading
+                    fontSize={{ base: "2xl", lg: "4xl" }}
+                    alignSelf="flex-start"
+                    pb="0.5rem"
+                    // bg="red"
                   >
-                    {selectedProject.projectSummary}
-                  </Text>
-                </Box>
+                    {selectedProject.title}
+                  </Heading>
 
-                <Link to={selectedProject.id} w="100%">
-                  <Button
+                  <Box
+                    display={{ base: "flex", lg: "flex" }}
+                    overflow="hidden"
+                    overflowY="scroll"
+                    // bg="blue"
+                  >
+                    <Text
+                      as="p"
+                      fontSize={{ base: "sm", lg: "lg" }}
+                    >
+                      {selectedProject.previewSummary}
+                    </Text>
+                  </Box>
+
+                  <Link
+                    to={currentPage === "UX Case Studies" ? selectedProject.pathName : selectedProject.id}
                     w="100%"
-                    variant="outline"
-                    size={{ base: "sm", lg: "md", xl: "lg" }}
-                    colorScheme="white"
-                    rightIcon={<ArrowForwardIcon />}
                   >
-                    View Full Project
-                  </Button>
-                </Link>
+                    <Button
+                      w="100%"
+                      variant="outline"
+                      size={{ base: "sm", lg: "md", xl: "lg" }}
+                      colorScheme="white"
+                      rightIcon={<ArrowForwardIcon />}
+                      mt="0.7rem"
+                      // bg="red"
+                    >
+                      View Full Project
+                    </Button>
+                  </Link>
 
-              </Box>
-            </Stack>
+                </Box>
+              </Stack>
+            </Box>
           )}
 
           <HStack
-            h="20vh"
+            h="25%"
             px="0.5rem"
             spacing={2}
-          // bg="pink"
+            // bg="pink"
           >
             {
               projects.slice().reverse().map((project) => ( //Map through the Data in reverse order
@@ -140,9 +150,9 @@ export default function ProjectPreview() {
                   alt={`${project.title} Thumbnail`}
                   cursor='pointer'
                   onClick={() => handleClick(project)}
-                  _hover={{ transform: `scale(${selectedProject === project ? 1.3 : 1.1})` }} //Only unselected Projects will scale on hover
+                  _hover={{ transform: `scale(${selectedProject === project ? 1.2 : 1.1})` }} //Only unselected Projects will scale on hover
                   transition="transform 0.3s"
-                  transform={`scale(${selectedProject === project ? 1.3 : 1})`} //Active Project scales larger than others
+                  transform={`scale(${selectedProject === project ? 1.2 : 1})`} //Active Project scales larger than others
                 />
               ))
             }

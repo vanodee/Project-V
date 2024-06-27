@@ -9,6 +9,26 @@
             "previewImage": "/project_previews/front_end_projects/little_lemon/little_lemon_preview.webp",
             "previewSummary": "",
             "projectLink": ""
+        },
+        {
+            "id": 2,
+            "title": "My Portfolio",
+            "pathName": "my_portfolio",
+            "previewColor": "",
+            "thumbnail": "/project_previews/front_end_projects/stevano_peters/sp_thumbnail.webp",
+            "previewImage": "/project_previews/front_end_projects/stevano_peters/sp_preview.webp",
+            "previewSummary": "",
+            "projectLink": ""
+        },
+        {
+            "id": 3,
+            "title": "Singleton Project",
+            "pathName": "singleton_project",
+            "previewColor": "rgba(40, 161, 200, 0.3)",
+            "thumbnail": "/project_previews/front_end_projects/hdys/hdys_thumbnail.webp",
+            "previewImage": "/project_previews/front_end_projects/hdys/hdys_preview.webp",
+            "previewSummary": "",
+            "projectLink": ""
         }
     ],
 
@@ -177,27 +197,81 @@
             "thumbnail": "/project_previews/brand_designs/dstv/dstv_thumbnail.webp",
             "previewImage": "/project_previews/brand_designs/dstv/dstv_preview.webp",
             "previewSummary": "",
-            "projectLink": ""
+            "projectHero": "/project_previews/brand_designs/dstv/dstv_preview.webp",
+            "projectClient": "MultiChoice Nigeria, established in 1993 as a collaboration between MultiChoice Africa and Adewunmi Ogunsanya (SAN), is dedicated to delivering quality entertainment through its DStv and GOtv platforms to households across Nigeria. Through various initiatives such as corporate social investment, education, training, sports, and local infrastructure development, MultiChoice Nigeria has made significant contributions to the Nigerian economy, fostered entrepreneurship, and created employment opportunities. By supporting and promoting local content, particularly in the thriving Nollywood industry, the company empowers indigenous filmmakers and related sectors, ultimately generating more income for the country. Committed to its mission of enriching lives, MultiChoice Nigeria strives to make a positive impact while minimizing any adverse effects on the communities it serves.",
+            "projectJob": "MultiChoice Nigeria is a repeat-client to an experiencial marketing agency I work with. Their brand design needs vary from: Resizing/Rearranging existing designs, to Creating entirely new designs from existing brand assets, depending on the marketing campaign being worked on. Basically everything from Billboards, Roll up banners, Feather banners, Back drops, Flyers, etc.",
+            "projectImagesL": [
+                "/project_previews/brand_designs/dstv/dstv_1.webp",
+                "/project_previews/brand_designs/dstv/dstv_2.webp",
+                "/project_previews/brand_designs/dstv/dstv_11.webp"
+            ],
+            "projectImagesP": [
+                "/project_previews/brand_designs/dstv/dstv_3.webp",
+                "/project_previews/brand_designs/dstv/dstv_4.webp",
+                "/project_previews/brand_designs/dstv/dstv_5.webp",
+                "/project_previews/brand_designs/dstv/dstv_6.webp",
+                "/project_previews/brand_designs/dstv/dstv_7.webp",
+                "/project_previews/brand_designs/dstv/dstv_8.webp",
+                "/project_previews/brand_designs/dstv/dstv_9.webp",
+                "/project_previews/brand_designs/dstv/dstv_10.webp"
+            ]
         },
         {
             "id": 2,
+            "title": "Siblings",
+            "pathName": "siblings_laundromat",
+            "previewColor": "rgba(60, 166, 166, 0.3)",
+            "thumbnail": "/project_previews/brand_designs/siblings/siblings_thumbnail.webp",
+            "previewImage": "/project_previews/brand_designs/siblings/siblings_preview.webp",
+            "previewSummary": "",
+            "projectHero": "/project_previews/brand_designs/siblings/siblings_preview.webp",
+            "projectClient": "Siblings Laundromat, founded in 2022, is a leading provider of premium and affordable laundry services in Shasha, Lagos, Nigeria, and surrounding areas. Renowned for its exceptional customer service, competitive pricing, and professional laundry solutions, the company has swiftly established itself as the go-to choice for residents. Siblings Laundromat takes great pride in its commitment to caring for the clothes their customers wear, offering a comprehensive range of services including laundry, drying, dry-cleaning, and more. With the convenience of both drop-off and self-service options, Siblings Laundromat ensures that customers' laundry needs are met efficiently and to the highest standards.",
+            "projectJob": "Although currently a very satisfied repeat client of my design services, Siblings Laundromat, for their grand opening in the year 2022, requested brand identity designs that were in line with their, at the time, newly designed logo. Large banners, roll-up banners, flyers, and other brand assets adorn their main building.",
+            "projectImagesL": [
+                "/project_previews/brand_designs/siblings/siblings_1.webp",
+                "/project_previews/brand_designs/siblings/siblings_9.webp",
+                "/project_previews/brand_designs/siblings/siblings_2.webp"
+            ],
+            "projectImagesP": [
+                "/project_previews/brand_designs/siblings/siblings_3.webp",
+                "/project_previews/brand_designs/siblings/siblings_4.webp",
+                "/project_previews/brand_designs/siblings/siblings_5.webp",
+                "/project_previews/brand_designs/siblings/siblings_6.webp",
+                "/project_previews/brand_designs/siblings/siblings_7.webp",
+                "/project_previews/brand_designs/siblings/siblings_8.webp"
+            ]
+        },
+        {
+            "id": 3,
             "title": "JANETTOTTY",
             "pathName": "janettotty",
             "previewColor": "rgba(243, 203, 154, 0.3)",
             "thumbnail": "/project_previews/brand_designs/janettotty/janettotty_thumbnail.webp",
             "previewImage": "/project_previews/brand_designs/janettotty/janettotty_preview.webp",
             "previewSummary": "",
-            "projectLink": ""
-        },
-        {
-            "id": 3,
-            "title": "Siblings Laundromat",
-            "pathName": "siblings_laundromat",
-            "previewColor": "rgba(60, 166, 166, 0.3)",
-            "thumbnail": "/project_previews/brand_designs/siblings/siblings_thumbnail.webp",
-            "previewImage": "/project_previews/brand_designs/siblings/siblings_preview.webp",
-            "previewSummary": "",
-            "projectLink": ""
+            "projectHero": "/project_previews/brand_designs/janettotty/janettotty_1.webp",
+            "projectClient": "JANETTOTTY is a make-up brand run by, you guessed it; Janet Totty. She is a Nigerian lady, proud of her heritage and unwilling to compromise on her true identity. “Over the years, I have learned that true beauty comes from loving and expressing ourselves as we are, and not from struggling towards perfection. Confidence is where true beauty starts. After 12 years of intensive research in the cosmetic industry in Germany, I was inspired to create an inclusive makeup line that remedies fundamental inadequacies for people who look like me; this is why I decided, through Janettotty, to make quality products available that would suit similar skin tones and be easily accessible across Europe and Africa...",
+            "projectJob": "For her product launch in Lagos, Nigeria, Janettotty requested Physical & E-tickets/Invites, Photo-walls, Stage Backdrops and other brand design assets to facillitate the event.",
+            "projectImagesL": [
+                "/project_previews/brand_designs/janettotty/janettotty_2.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_3.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_8.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_16.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_17.webp"
+            ],
+            "projectImagesP": [
+                "/project_previews/brand_designs/janettotty/janettotty_4.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_5.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_6.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_7.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_9.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_10.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_11.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_12.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_13.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_14.webp",
+                "/project_previews/brand_designs/janettotty/janettotty_15.webp"
+            ]
         }
     ]
 }

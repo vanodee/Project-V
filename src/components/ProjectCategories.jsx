@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react";
 export const projectCategories = [
     { id: 1, name: "Front-End Projects", path: "Front_End_Projects" },
     { id: 2, name: "UX Case Studies", path: "UX_Case_Studies" },
-    { id: 3, name: "UI Designs", path: "UI_Designs" },
+    // { id: 3, name: "UI Designs", path: "UI_Designs" },
     { id: 4, name: "Logo Designs", path: "Logo_Designs" },
     { id: 5, name: "Brand Designs", path: "Brand_Designs" },
 ];

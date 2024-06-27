@@ -4,7 +4,6 @@ import {
     Drawer,
     DrawerBody,
     DrawerFooter,
-    DrawerHeader,
     DrawerOverlay,
     DrawerContent,
     DrawerCloseButton,
@@ -27,12 +26,13 @@ export default function Nav() {
     return (
         <>
             <HStack
+                as="nav"
                 spacing={2}
                 display={{ base: "none", md: "none", lg: "flex" }}
-                px={'15px'}
-                py={'10px'}
-                borderRadius={'10px'}
-                bgColor='rgba(0, 0, 0, 0.2)'
+                p='0.5rem'
+                h="fit-content"
+                borderRadius='0.5rem'
+                bgColor='rgba(0, 0, 0, 0.25)'
                 backdropFilter='auto'
                 backdropBlur='8px'
             >
@@ -64,10 +64,9 @@ export default function Nav() {
                 >
 
                     <DrawerCloseButton color='white' h='30px'/>
-                    {/* <DrawerHeader color='white' >Navigation</DrawerHeader> */}
 
                     <DrawerBody pt='5rem'>
-                        <VStack spacing="1.5rem">
+                        <VStack as="nav" spacing="1.5rem">
                             <NavItems onClick={onClose} />
                         </VStack>
                     </DrawerBody>

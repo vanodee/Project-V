@@ -1,5 +1,5 @@
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import { Box, Grid, GridItem, HStack, Heading, IconButton, Image, Stack, Text, VStack, textDecoration } from "@chakra-ui/react";
+import { Box, HStack, Heading, IconButton, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import { Link, useLoaderData, useParams } from "react-router-dom"
 
 
@@ -19,7 +19,7 @@ export default function LogoDesignProjects() {
 
     return (
         <Box
-            h="100vh"
+            h="100dvh"
             bg="white"
             bgGradient='linear(to-br, rgba(255,255,255,0.3), rgba(0,0,0,0.5))'
             overflow="hidden"
@@ -50,7 +50,7 @@ export default function LogoDesignProjects() {
             </Link>
 
             <VStack
-                h="100vh"
+                h="100dvh"
                 bg={logo_project.previewColor}
                 spacing={10}
                 pb="5rem"
@@ -59,7 +59,7 @@ export default function LogoDesignProjects() {
                 <Image
                     src={logo_project.projectHero}
                     alt={`${logo_project.title} Hero Image`}
-                    h={{ xl: "60vh" }}
+                    h={{ xl: "60dvh" }}
                     w="100vw"
                     objectFit="cover"
                 />

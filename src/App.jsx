@@ -11,6 +11,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
+import DrNotii from './pages/DrNotii';
+import StellasGarage from './pages/StellasGarage';
+import VeeCinemas from './pages/VeeCinemas';
 
 
 // Layouts
@@ -25,6 +28,9 @@ import ProjectPreview, {
   ux_case_studies_loader
 } from './components/ProjectPreview';
 import LogoDesignProjects, { logo_project_page_loader } from './layouts/LogoDesignProjects';
+import BrandDesignProjects, { brand_design_page_loader } from './layouts/BrandDesignProjects';
+
+
 
 
 
@@ -35,14 +41,22 @@ const router = createBrowserRouter(
 
       <Route path='Projects' element={<ProjectsLayout />}>
         <Route path='Front_End_Projects' element={<ProjectPreview />} loader={front_end_projects_loader} />
-        <Route path='UX_Case_Studies' element={<ProjectPreview />} loader={ux_case_studies_loader} />
+
+        <Route path='UX_Case_Studies' element={<ProjectPreview />} loader={ux_case_studies_loader}>
+          <Route path='dr_notii' element={<DrNotii />} />
+          <Route path='stellas_garage' element={<StellasGarage />} />
+          <Route path='vee_cinemas' element={<VeeCinemas />} />
+        </Route>
+
         <Route path='UI_Designs' element={<ProjectPreview />} loader={ui_designs_loader} />
 
         <Route path='Logo_Designs' element={<ProjectPreview />} loader={logo_designs_loader}>
           <Route path=':id' element={<LogoDesignProjects />} loader={logo_project_page_loader} />
         </Route>
 
-        <Route path='Brand_Designs' element={<ProjectPreview />} loader={brand_designs_loader} />
+        <Route path='Brand_Designs' element={<ProjectPreview />} loader={brand_designs_loader}>
+          <Route path=':id' element={<BrandDesignProjects />} loader={brand_design_page_loader} />
+        </Route>
       </Route>
 
       <Route path='About' element={<About />} />

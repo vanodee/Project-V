@@ -49,12 +49,12 @@ export default function ProjectsLayout() {
 
 
   return (
-    <Box h='100vh'>
+    <Box h='100dvh'>
 
       {pathArraySize < 3 && (
         <Image
           src={LogoBackdrop}
-          h={{ base: '40vh', md: '60vh' }}
+          h={{ base: '40dvh', md: '60dvh' }}
           position="fixed"
           top="50%"
           left="50%"
@@ -64,7 +64,7 @@ export default function ProjectsLayout() {
         />
       )}
 
-      <Outlet context={[pathArraySize]} />
+      <Outlet context={[pathArraySize, currentPage]} />
 
       {currentPage === "Projects" && (
         <Flex
@@ -104,12 +104,12 @@ export default function ProjectsLayout() {
         >
           <Stack
             display={{ base: 'none', lg: 'flex' }}
-            minW='800px'
+            justifyContent="center"
+            minW="800px"
             direction='row'
             spacing={2}
-            px={'15px'}
-            py={'10px'}
-            borderRadius={'10px'}
+            py='0.5rem'
+            borderRadius='0.5rem'
             bgColor='rgba(0, 0, 0, 0.2)'
             backdropFilter='auto'
             backdropBlur='8px'

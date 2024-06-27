@@ -11,7 +11,7 @@ export default function RootLayout() {
             <Box
                 as='main'
                 bg={'white'}
-                h={'100vh'}
+                h={'100dvh'}
             >
                 <Box
                     bgGradient='linear(to-br, rgba(255,255,255,0.3), rgba(0,0,0,0.5))'
@@ -19,7 +19,7 @@ export default function RootLayout() {
                     zIndex={0}
                 >
                     <Box
-                        h={{ base: '50vh', md: "65vh" }}
+                        h={{ base: '50dvh', md: "65dvh" }}
                         position='relative'
                         zIndex={1}
                     >
@@ -31,7 +31,7 @@ export default function RootLayout() {
                         filter='auto'
                         blur='3px'
                         w="100%"
-                        h={{ base: '50vh', md: "35vh" }}
+                        h={{ base: '50dvh', md: "35dvh" }}
                         pointerEvents='none'
                     >
                         <Text color='rgba(255,255,255,0.0)'>Floor</Text>
