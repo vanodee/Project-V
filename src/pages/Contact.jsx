@@ -10,6 +10,7 @@ import {
   useMediaQuery
 } from "@chakra-ui/react"
 import { useState } from 'react'
+import SocialLinks from "../components/SocialLinks";
 
 
 
@@ -53,11 +54,12 @@ export default function Contact() {
       alignItems={isLandscape ? 'flex-start' : isPortrait && "center"}
       justifyContent='center'
       overflow="hidden"
-      overflowY={{base:"hidden", md:"scroll", lg:"hidden"}}
+      overflowY="scroll"
       h='100dvh'
       pt="15dvh"
     >
       <VStack
+        spacing="3rem"
         bgGradient='linear(to-br, rgba(0,0,0,0.45), rgba(0,0,0,0.85))'
         backdropFilter='auto'
         backdropBlur='15px'
@@ -90,7 +92,7 @@ export default function Contact() {
                   }}
                   textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 >
-                  GET IN TOUCH!
+                  LET'S CONNECT!
                 </Heading>
 
                 <FormControl isRequired isDisabled={isLoading}>
@@ -130,7 +132,6 @@ export default function Contact() {
                     type="text"
                     resize="none"
                     placeholder="Message"
-                    // variant="flushed"
                     sx={inputFieldStyles}
                   />
                 </FormControl>
@@ -192,9 +193,12 @@ export default function Contact() {
               >
                 Done
               </Button>
+
             </VStack>
           </>
         )}
+
+        <SocialLinks />
 
       </VStack>
 

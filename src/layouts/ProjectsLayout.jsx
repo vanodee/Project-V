@@ -50,18 +50,31 @@ export default function ProjectsLayout() {
 
   return (
     <Box h='100dvh'>
-
       {pathArraySize < 3 && (
-        <Image
-          src={LogoBackdrop}
-          h={{ base: '40dvh', md: '60dvh' }}
-          position="fixed"
-          top="50%"
-          left="50%"
-          transform={{ base: "translate(-50%, -88%)", md: "translate(-50%, -63%)" }}
-          filter='auto'
-          blur='7px'
-        />
+        <>
+          <Heading
+            position="fixed"
+            top="15dvh"
+            px="1rem"
+            opacity="0.3"
+            textAlign="center"
+            w="100dvw"
+            fontSize={{ base: "4rem", lg: "5rem" }}
+          >
+            {currentPage}
+          </Heading>
+
+          <Image
+            src={LogoBackdrop}
+            h={{ base: '40dvh', md: '60dvh' }}
+            position="fixed"
+            top="50%"
+            left="50%"
+            transform={{ base: "translate(-50%, -88%)", md: "translate(-50%, -63%)" }}
+            filter='auto'
+            blur='7px'
+          />
+        </>
       )}
 
       <Outlet context={[pathArraySize, currentPage]} />

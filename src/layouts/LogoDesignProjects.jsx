@@ -1,11 +1,23 @@
-import { ArrowBackIcon } from "@chakra-ui/icons";
-import { Box, HStack, Heading, IconButton, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+    Box,
+    HStack,
+    Heading,
+    IconButton,
+    Image,
+    Stack,
+    Text,
+    VStack
+} from "@chakra-ui/react";
 import { Link, useLoaderData, useParams } from "react-router-dom"
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import ProjectFooter from "../components/ProjectFooter";
+import whiteEmblem from '../assets/emblem_white.webp'
 
 
 export default function LogoDesignProjects() {
     // const { id } = useParams();
     const logo_project = useLoaderData();
+
 
     // Repetitive CSS
     const headingStyles = {
@@ -53,8 +65,8 @@ export default function LogoDesignProjects() {
                 h="100dvh"
                 bg={logo_project.previewColor}
                 spacing={10}
-                pb="5rem"
                 overflowY="scroll"
+                overflowX="hidden"
             >
                 <Image
                     src={logo_project.projectHero}
@@ -101,6 +113,9 @@ export default function LogoDesignProjects() {
                         />
                     ))
                 }
+
+                <ProjectFooter />
+
             </VStack>
 
         </Box>

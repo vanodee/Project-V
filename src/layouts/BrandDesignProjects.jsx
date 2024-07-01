@@ -1,11 +1,25 @@
-import { ArrowBackIcon } from "@chakra-ui/icons";
-import { Box, Grid, GridItem, HStack, Heading, IconButton, Image, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+    Box,
+    Grid,
+    GridItem,
+    HStack,
+    Heading,
+    IconButton,
+    Image,
+    Stack,
+    Text,
+    VStack
+} from "@chakra-ui/react";
 import { Link, useLoaderData, useParams } from "react-router-dom"
+import { ArrowBackIcon } from "@chakra-ui/icons";
+import ProjectFooter from "../components/ProjectFooter";
+import whiteEmblem from '../assets/emblem_white.webp'
 
 
 export default function BrandDesignProjects() {
     // const { id } = useParams();
     const brand_design_project = useLoaderData();
+
 
     // Repetitive CSS
     const headingStyles = {
@@ -53,8 +67,8 @@ export default function BrandDesignProjects() {
                 h="100dvh"
                 bg={brand_design_project.previewColor}
                 spacing={10}
-                pb="5rem"
                 overflowY="scroll"
+                overflowX="hidden"
             >
                 <Image
                     src={brand_design_project.projectHero}
@@ -124,6 +138,8 @@ export default function BrandDesignProjects() {
                         </GridItem>
                     ))}
                 </Grid>
+
+                <ProjectFooter />
 
             </VStack>
 

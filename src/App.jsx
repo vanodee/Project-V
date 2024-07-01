@@ -11,9 +11,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
-import DrNotii from './pages/DrNotii';
-import StellasGarage from './pages/StellasGarage';
-import VeeCinemas from './pages/VeeCinemas';
+import DrNotii, { dr_notii_loader } from './pages/DrNotii';
+import StellasGarage, { stellas_garage_loader } from './pages/StellasGarage';
+import VeeCinemas, { vee_cinemas_loader } from './pages/VeeCinemas';
 
 
 // Layouts
@@ -43,9 +43,9 @@ const router = createBrowserRouter(
         <Route path='Front_End_Projects' element={<ProjectPreview />} loader={front_end_projects_loader} />
 
         <Route path='UX_Case_Studies' element={<ProjectPreview />} loader={ux_case_studies_loader}>
-          <Route path='dr_notii' element={<DrNotii />} />
-          <Route path='stellas_garage' element={<StellasGarage />} />
-          <Route path='vee_cinemas' element={<VeeCinemas />} />
+          <Route path='dr_notii' element={<DrNotii />} loader={dr_notii_loader} />
+          <Route path='stellas_garage' element={<StellasGarage />} loader={stellas_garage_loader} />
+          <Route path='vee_cinemas' element={<VeeCinemas />} loader={vee_cinemas_loader} />
         </Route>
 
         <Route path='UI_Designs' element={<ProjectPreview />} loader={ui_designs_loader} />
