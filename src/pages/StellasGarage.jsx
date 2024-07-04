@@ -119,14 +119,14 @@ export default function StellasGarage() {
             fontSize={{ base: "2rem", md: "2.5rem", lg: "4rem" }}
             fontWeight="bold"
           >
-            A WEBSITE TO SIMPLIFY YOUR CAR PURCHASING DECISIONS.
+            A PLATFORM TO SIMPLIFY YOUR CAR PURCHASING DECISIONS.
           </Heading>
         </VStack>
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Hero+Image"
-          // src={projectImages.heroImage}
+          // src="https://via.placeholder.com/800x400?text=Hero+Image"
+          src={projectImages.heroImage}
           sx={sectionImage}
         />
 
@@ -174,7 +174,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Animated+Mockup"
+            src={projectImages.splashImage}
             sx={subSectionImage}
           />
         </VStack>
@@ -188,7 +188,7 @@ export default function StellasGarage() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Image"
+          src={projectImages.researchHero}
           sx={sectionImage}
         />
 
@@ -292,14 +292,14 @@ export default function StellasGarage() {
             // bg="red"
           >
             <Image
-              src="https://via.placeholder.com/1280x720?text=Section+Image"
+              src={projectImages.persona1}
               w={{ base: "100%", md: "50%" }}
               borderRadius="0.5rem"
               objectFit="cover"
             />
 
             <Image
-              src="https://via.placeholder.com/1280x720?text=Section+Image"
+              src={projectImages.persona2}
               w={{ base: "100%", md: "50%" }}
               borderRadius="0.5rem"
               objectFit="cover"
@@ -331,7 +331,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=User+Journey+Map"
+            src={projectImages.journeyMap}
             sx={subSectionImage}
           />
 
@@ -377,7 +377,7 @@ export default function StellasGarage() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Image"
+          src={projectImages.lofiHero}
           sx={sectionImage}
         />
 
@@ -408,7 +408,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Information+Architecture"
+            src={projectImages.infoArc}
             sx={subSectionImage}
           />
 
@@ -437,7 +437,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=User+Flow+Diagram"
+            src={projectImages.userFlow}
             sx={subSectionImage}
           />
 
@@ -469,12 +469,12 @@ export default function StellasGarage() {
           sx={twoColumnContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Homepage+Wireframes"
+            src={projectImages.wireframes[0]}
             w={{ base: "100%", md: "50%" }}
           />
 
           <Image
-            src="https://via.placeholder.com/800x400?text=Buy+a+Car+Wireframes"
+            src={projectImages.wireframes[1]}
             w={{ base: "100%", md: "50%" }}
           />
         </Stack>
@@ -495,7 +495,7 @@ export default function StellasGarage() {
           </Text>
 
           <Image
-            src="https://via.placeholder.com/800x400?text=Car+Details+Wireframes"
+            src={projectImages.wireframes[2]}
             w={{ base: "100%", md: "50%" }}
             h="fit-content"
           />
@@ -552,7 +552,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Lofi+Prototyping"
+            src={projectImages.lofiPrototype}
             sx={subSectionImage}
           />
 
@@ -571,7 +571,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Animated+Lofi+Prototyping"
+            src={projectImages.animatedLofi}
             sx={subSectionImage}
           />
 
@@ -587,7 +587,7 @@ export default function StellasGarage() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Image"
+          src={projectImages.hifiHero}
           sx={sectionImage}
         />
 
@@ -616,7 +616,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Style+Guide"
+            src={projectImages.styleGuide}
             sx={subSectionImage}
           />
 
@@ -645,7 +645,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Interactive+Components"
+            src={projectImages.animatedComponents}
             sx={subSectionImage}
           />
 
@@ -662,13 +662,77 @@ export default function StellasGarage() {
         </Text>
 
 
-        <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
-          sx={subSectionImageContainer}
+        <VStack    //HIFI MOCKUPS LAYOUT ------------------------------------------------------------------
+          w= "100dvw"
+          maxW= "1200px"
+          px= {{base: "1.5rem", md: "2rem" }}
         >
-          <Image
-            src="https://via.placeholder.com/800x400?text=Hifi+Mockups"
-            sx={subSectionImage}
-          />
+          <Stack
+            flexDir={{ base: "column", md: "row" }}
+            alignItems="flex-start"
+          >
+            <Image
+              src={projectImages.hifiMockups[0]}
+              borderRadius="0.5rem"
+              w={{ base: "100%", md: "50%" }}
+              objectFit="contain"
+            />
+
+            <Image
+              src={projectImages.hifiMockups[1]}
+              borderRadius="0.5rem"
+              w={{ base: "100%", md: "50%" }}
+              objectFit="contain"
+            />
+          </Stack>
+
+          <Stack
+            flexDir={{ base: "column", md: "row" }}
+            alignItems="flex-start"
+          >
+            <Image
+              src={projectImages.hifiMockups[2]}
+              borderRadius="0.5rem"
+              w={{ base: "100%", md: "50%" }}
+              objectFit="contain"
+            />
+
+            <Image
+              src={projectImages.hifiMockups[3]}
+              borderRadius="0.5rem"
+              w={{ base: "100%", md: "50%" }}
+              objectFit="contain"
+            />
+          </Stack>
+
+          <Stack
+            flexDir={{ base: "column", md: "row" }}
+            alignItems="flex-start"
+          >
+            <Image
+              src={projectImages.hifiMockups[4]}
+              borderRadius="0.5rem"
+              w={{ base: "100%", md: "50%" }}
+              objectFit="contain"
+            />
+
+            <VStack w={{ base: "100%", md: "50%" }}>
+              <Image
+                src={projectImages.hifiMockups[5]}
+                borderRadius="0.5rem"
+                w="100%"
+                objectFit="contain"
+              />
+
+              <Image
+                src={projectImages.hifiMockups[6]}
+                w="100%"
+                borderRadius="0.5rem"
+                objectFit="contain"
+              />
+            </VStack>
+
+          </Stack>
 
           <Text>High Fidelity MockUps</Text>
         </VStack>
@@ -678,7 +742,7 @@ export default function StellasGarage() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Hifi+Prototyping"
+            src={projectImages.hifiPrototype}
             sx={subSectionImage}
           />
 
@@ -694,7 +758,7 @@ export default function StellasGarage() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Image"
+          src={projectImages.finalHero}
           sx={sectionImage}
         />
 
@@ -716,7 +780,7 @@ export default function StellasGarage() {
           </Text>
 
           <ChakraLink
-            href=""
+            href="https://xd.adobe.com/view/a1eef350-861c-4301-a588-5cd14e29350e-f4bd/"
             isExternal
             alignSelf="center"
           >
@@ -730,7 +794,7 @@ export default function StellasGarage() {
           </ChakraLink>
 
           <ChakraLink
-            href=""
+            href="https://xd.adobe.com/view/8663c47c-f1c1-4b53-90fd-29de70480560-d330/"
             isExternal
             alignSelf="center"
           >

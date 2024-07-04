@@ -1,16 +1,18 @@
 import {
-  Box,
-  Heading,
-  Button,
-  Link as ChakraLink,
-  IconButton,
-  Image,
-  Stack,
-  Text,
-  VStack,
-  UnorderedList,
-  ListItem,
-  useMediaQuery
+    Box,
+    Heading,
+    Button,
+    Link as ChakraLink,
+    IconButton,
+    Image,
+    Stack,
+    Text,
+    VStack,
+    UnorderedList,
+    ListItem,
+    Grid,
+    GridItem,
+    useMediaQuery
 } from "@chakra-ui/react";
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
@@ -125,8 +127,8 @@ export default function DrNotii() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Hero+Image"
-                    // src={projectImages.heroImage}
+                    // src="https://via.placeholder.com/800x400?text=Hero+Image"
+                    src={projectImages.heroImage}
                     sx={sectionImage}
                 />
 
@@ -175,8 +177,27 @@ export default function DrNotii() {
                 <VStack  //IMAGE ------------------------------------------------------------------
                     sx={subSectionImageContainer}
                 >
+                    <Stack
+                        flexDir={{ base: "column", md: "row" }}
+                        alignItems="flex-start"
+                        justifyContent="center"
+                    >
+                        <Image
+                            src={projectImages.splashImage[0]}
+                            borderRadius="0.5rem"
+                            w={{ base: "100%", md: "50%" }}
+                            objectFit="contain"
+                        />
+
+                        <Image
+                            src={projectImages.splashImage[1]}
+                            borderRadius="0.5rem"
+                            w={{ base: "100%", md: "50%" }}
+                            objectFit="contain"
+                        />
+                    </Stack>
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Animated+Mockup"
+                        src={projectImages.splashImage[2]}
                         sx={subSectionImage}
                     />
                 </VStack>
@@ -190,7 +211,7 @@ export default function DrNotii() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Image"
+                    src={projectImages.researchHero}
                     sx={sectionImage}
                 />
 
@@ -249,7 +270,7 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Article+Summary"
+                        src={projectImages.articleSummary}
                         sx={subSectionImage}
                     />
 
@@ -317,14 +338,14 @@ export default function DrNotii() {
                         // bg="red"
                     >
                         <Image
-                            src="https://via.placeholder.com/1280x720?text=Section+Image"
+                            src={projectImages.persona1}
                             w={{ base: "100%", md: "50%" }}
                             borderRadius="0.5rem"
                             objectFit="cover"
                         />
 
                         <Image
-                            src="https://via.placeholder.com/1280x720?text=Section+Image"
+                            src={projectImages.persona2}
                             w={{ base: "100%", md: "50%" }}
                             borderRadius="0.5rem"
                             objectFit="cover"
@@ -353,7 +374,7 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=User+Journey+Map"
+                        src={projectImages.journeyMap}
                         sx={subSectionImage}
                     />
 
@@ -391,7 +412,7 @@ export default function DrNotii() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Image"
+                    src={projectImages.lofiHero}
                     sx={sectionImage}
                 />
 
@@ -423,7 +444,7 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Information+Architecture"
+                        src={projectImages.infoArc}
                         sx={subSectionImage}
                     />
 
@@ -455,7 +476,7 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=User+Flow+Diagram"
+                        src={projectImages.userFlow}
                         sx={subSectionImage}
                     />
 
@@ -478,10 +499,6 @@ export default function DrNotii() {
                         As this is a multi-platform solution, version 1 of this project was done starting three platforms; a dedicated mobile app, a mobile website and a desktop web app. The wireframes for all platforms were drawn up, using the dedicated mobile app as a starting point.
                         <br />
                         <br />
-                        As both the mobile app and mobile website versions would operate on mobile devices, the only major differences between them are the use of a hamburger menu for navigation on the mobile website and the representing of the "add new med" section as one scrollable page rather than 3 seperate modals as seen in the mobile app version.
-                        <br />
-                        <br />
-                        The Desktop web App version on the other hand, required a different approach. I decided on reworking more aspects of the design to suite the larger screen size. The navigation was moved to the side of the page and elememts were scaled up and rearranged.
                     </Text>
                 </Stack>
 
@@ -490,11 +507,53 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Wireframes"
+                        src={projectImages.wireframes[0]}
                         sx={subSectionImage}
                     />
 
-                    <Text>Initial wireframes created for this design</Text>
+                    <Text>Mobile App Wireframes</Text>
+                </VStack>
+
+
+                <Text
+                    sx={oneColumnText}
+                >
+                    As both the mobile app and mobile website versions would operate on mobile devices, the only major differences between them are the use of a hamburger menu for navigation on the mobile website and the representing of the "add new med" section as one scrollable page rather than 3 seperate modals as seen in the mobile app version.
+                    <br />
+                    <br />
+                </Text>
+
+
+                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Image
+                        src={projectImages.wireframes[1]}
+                        sx={subSectionImage}
+                    />
+
+                    <Text>Mobile Website Wireframes</Text>
+                </VStack>
+
+
+                <Text
+                    sx={oneColumnText}
+                >
+                    The Desktop web App version on the other hand, required a different approach. I decided on reworking more aspects of the design to suite the larger screen size. The navigation was moved to the side of the page and elememts were scaled up and rearranged.
+                    <br />
+                    <br />
+                </Text>
+
+
+                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Image
+                        src={projectImages.wireframes[2]}
+                        sx={subSectionImage}
+                    />
+
+                    <Text>Desktop Website Wireframes</Text>
                 </VStack>
 
 
@@ -519,12 +578,25 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Lofi+Prototyping"
+                        src={projectImages.lofiPrototype[0]}
                         sx={subSectionImage}
                     />
 
-                    <Text>Low Fidelity Prototypes</Text>
+                    <Text>Mobile App Prototyping</Text>
                 </VStack>
+
+
+                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Image
+                        src={projectImages.lofiPrototype[1]}
+                        sx={subSectionImage}
+                    />
+
+                    <Text>Desktop Web App Prototyping</Text>
+                </VStack>
+
 
                 <VStack   //1 COLUMN TEXT WITH LIST ------------------------------------------------------------------
                     sx={oneColumnText}
@@ -558,7 +630,7 @@ export default function DrNotii() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Image"
+                    src={projectImages.hifiHero}
                     sx={sectionImage}
                 />
 
@@ -590,11 +662,23 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Style+Guide"
+                        src={projectImages.styleGuide[0]}
                         sx={subSectionImage}
                     />
 
                     <Text>Colors, Type & Logo</Text>
+                </VStack>
+
+
+                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Image
+                        src={projectImages.styleGuide[1]}
+                        sx={subSectionImage}
+                    />
+
+                    <Text>Component Sheet</Text>
                 </VStack>
 
 
@@ -610,7 +694,7 @@ export default function DrNotii() {
                     <Text
                         sx={twoColumnText}
                     >
-                        Putting the Typeface, Colors and Components together, gave life to the final mockups and eventually the hi-fi prototype and three sets of mockups (as show above) were created for the three different platforms.
+                        Putting the Typeface, Colors and Components together, gave life to the final mockups and eventually the hi-fi prototype and three sets of mockups (as shown below) were created for the three different platforms.
                         <br />
                         <br />
                         The other aspects that brought more life to the app's user experience were the interactive parts. Every interactive component and page transition was crafted to give the user the modern feel while lending a sense of direction to every swipe and click within the UI.
@@ -618,15 +702,84 @@ export default function DrNotii() {
                 </Stack>
 
 
-                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                <VStack    //IMAGE GRID WITH CAPTION ------------------------------------------------------------------
                     sx={subSectionImageContainer}
                 >
-                    <Image
-                        src="https://via.placeholder.com/800x400?text=Interactive+Components"
-                        sx={subSectionImage}
-                    />
+                    <Grid
+                        templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
+                        gap='1rem'
+                        w="100%"
+                    >
+                        {
+                            projectImages.hifiMockups.slice(0, 10).map((mockup, index) => (
+                                <GridItem
+                                    key={index}
+                                    colSpan="2"
+                                >
+                                    <Image
+                                        src={mockup}
+                                        sx={subSectionImage}
+                                    />
+                                </GridItem>
+                            ))
+                        }
+                    </Grid>
 
-                    <Text>Interactive Components created for the Project</Text>
+                    <Text fontWeight="bold">MOBILE APP MOCKUPS</Text>
+                </VStack>
+
+
+                <VStack    //IMAGE GRID WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Grid
+                        templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
+                        gap='1rem'
+                        w="100%"
+                    >
+                        {
+                            projectImages.hifiMockups.slice(10, 14).map((mockup, index) => (
+                                <GridItem
+                                    key={index}
+                                    colSpan="2"
+                                >
+                                    <Image
+                                        src={mockup}
+                                        sx={subSectionImage}
+                                    />
+                                </GridItem>
+                            ))
+                        }
+                    </Grid>
+
+                    <Text fontWeight="bold">MOBILE WEBSITE MOCKUPS</Text>
+                </VStack>
+
+
+                <VStack    //IMAGE GRID WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Grid
+                        templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
+                        gap='1rem'
+                        w="100%"
+                    >
+                        {
+                            projectImages.hifiMockups.slice(14, 18).map((mockup, index) => (
+                                <GridItem
+                                    key={index}
+                                    colSpan="4"
+                                >
+                                    <Image
+                                        src={mockup}
+                                        sx={subSectionImage}
+                                    />
+                                </GridItem>
+                            ))
+                        }
+                    </Grid>
+
+                    <Text fontWeight="bold">DESKTOP WEB APP MOCKUPS</Text>
                 </VStack>
 
 
@@ -635,11 +788,11 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Hifi+Mockups"
+                        src={projectImages.hifiPrototype[0]}
                         sx={subSectionImage}
                     />
 
-                    <Text>High Fidelity MockUps</Text>
+                    <Text>Hi-Fi Prototyping: Mobile App Flow</Text>
                 </VStack>
 
 
@@ -647,11 +800,23 @@ export default function DrNotii() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Hifi+Prototyping"
+                        src={projectImages.hifiPrototype[1]}
                         sx={subSectionImage}
                     />
 
-                    <Text>High-Fidelity Prototyping</Text>
+                    <Text>Hi-Fi Prototyping: Mobile Website Flow</Text>
+                </VStack>
+
+
+                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                    sx={subSectionImageContainer}
+                >
+                    <Image
+                        src={projectImages.hifiPrototype[2]}
+                        sx={subSectionImage}
+                    />
+
+                    <Text>Hi-Fi Prototyping: Desktop Web App Flow</Text>
                 </VStack>
 
 
@@ -663,7 +828,7 @@ export default function DrNotii() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Image"
+                    src={projectImages.finalHero}
                     sx={sectionImage}
                 />
 
@@ -682,7 +847,7 @@ export default function DrNotii() {
                     </Text>
 
                     <ChakraLink
-                        href=""
+                        href="https://www.figma.com/proto/KcaxeW3wKoex9eixiVWniQ/Dr.-Notii-[Medication-Reminder]-Project?node-id=185-6218&scaling=scale-down&page-id=44%3A62&starting-point-node-id=185%3A6181"
                         isExternal
                         alignSelf="center"
                     >
@@ -696,7 +861,7 @@ export default function DrNotii() {
                     </ChakraLink>
 
                     <ChakraLink
-                        href=""
+                        href="https://www.figma.com/proto/KcaxeW3wKoex9eixiVWniQ/Dr.-Notii-[Medication-Reminder]-Project?node-id=290-2925&scaling=scale-down&page-id=216%3A1964&starting-point-node-id=290%3A2925"
                         isExternal
                         alignSelf="center"
                     >
@@ -710,7 +875,7 @@ export default function DrNotii() {
                     </ChakraLink>
 
                     <ChakraLink
-                        href=""
+                        href="https://www.figma.com/proto/KcaxeW3wKoex9eixiVWniQ/Dr.-Notii-[Medication-Reminder]-Project?node-id=261-2507&scaling=scale-down&page-id=261%3A2356&starting-point-node-id=273%3A3963"
                         isExternal
                         alignSelf="center"
                     >

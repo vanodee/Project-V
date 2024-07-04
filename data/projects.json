@@ -52,8 +52,8 @@
             "infoArc": "/project_previews/ux_case_studies/v_cinemas/8_informationArc.webp",
             "userFlow": "/project_previews/ux_case_studies/v_cinemas/9_userflow.webp",
             "wireframes": "/project_previews/ux_case_studies/v_cinemas/10_wireframesAgain.webp",
-            "animatedLofi": "/project_previews/ux_case_studies/v_cinemas/11_lofiProto.gif",
             "lofiPrototype": "/project_previews/ux_case_studies/v_cinemas/12_lofiAgain.webp",
+            "animatedLofi": "/project_previews/ux_case_studies/v_cinemas/11_lofiProto.gif",
             "hifiHero": "/project_previews/ux_case_studies/v_cinemas/13_mockHero.webp",
             "styleGuide": "/project_previews/ux_case_studies/v_cinemas/14_styleGuide.webp",
             "animatedComponents": "/project_previews/ux_case_studies/v_cinemas/15_components.gif",
@@ -69,7 +69,37 @@
             "thumbnail": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_thumbnail.webp",
             "previewImage": "/project_previews/ux_case_studies/stellas_garage/stellas_garage_preview.webp",
             "previewSummary": "",
-            "projectLink": ""
+            "projectLink": "",
+            "heroImage": "/project_previews/ux_case_studies/stellas_garage/1_heroImage.webp",
+            "splashImage": "/project_previews/ux_case_studies/stellas_garage/2_animatedHero.gif",
+            "researchHero": "/project_previews/ux_case_studies/stellas_garage/3_researchHero.webp",
+            "persona1": "/project_previews/ux_case_studies/stellas_garage/4_persona1.webp",
+            "persona2": "/project_previews/ux_case_studies/stellas_garage/5_persona2.webp",
+            "journeyMap": "/project_previews/ux_case_studies/stellas_garage/6_journeyMap.webp",
+            "lofiHero": "/project_previews/ux_case_studies/stellas_garage/7_lofiHero.webp",
+            "infoArc": "/project_previews/ux_case_studies/stellas_garage/8_infoArc.webp",
+            "userFlow": "/project_previews/ux_case_studies/stellas_garage/9_userFlow.webp",
+            "wireframes": [
+                "/project_previews/ux_case_studies/stellas_garage/10.webp",
+                "/project_previews/ux_case_studies/stellas_garage/11.webp",
+                "/project_previews/ux_case_studies/stellas_garage/12.webp"
+            ],
+            "lofiPrototype": "/project_previews/ux_case_studies/stellas_garage/13_lofiProto.webp",
+            "animatedLofi": "/project_previews/ux_case_studies/stellas_garage/14_animatedLofi.gif",
+            "hifiHero": "/project_previews/ux_case_studies/stellas_garage/15_hifiHero.webp",
+            "styleGuide": "/project_previews/ux_case_studies/stellas_garage/16_styleGuide.webp",
+            "animatedComponents": "/project_previews/ux_case_studies/stellas_garage/17_animatedComponents.gif",
+            "hifiMockups": [
+                "/project_previews/ux_case_studies/stellas_garage/18.webp",
+                "/project_previews/ux_case_studies/stellas_garage/19.webp",
+                "/project_previews/ux_case_studies/stellas_garage/20.webp",
+                "/project_previews/ux_case_studies/stellas_garage/21.webp",
+                "/project_previews/ux_case_studies/stellas_garage/22.webp",
+                "/project_previews/ux_case_studies/stellas_garage/23.webp",
+                "/project_previews/ux_case_studies/stellas_garage/24.webp"
+            ],
+            "hifiPrototype": "/project_previews/ux_case_studies/stellas_garage/25_hifiProto.webp",
+            "finalHero": "/project_previews/ux_case_studies/stellas_garage/26_finalHero.webp"
         },
         {
             "id": 3,
@@ -79,7 +109,63 @@
             "thumbnail": "/project_previews/ux_case_studies/dr_notii/dr_notii_thumbnail.webp",
             "previewImage": "/project_previews/ux_case_studies/dr_notii/dr_notii_preview.webp",
             "previewSummary": "",
-            "projectLink": ""
+            "projectLink": "",
+            "heroImage": "/project_previews/ux_case_studies/dr_notii/1_heroImage.webp",
+            "splashImage": [
+                "/project_previews/ux_case_studies/dr_notii/2.gif",
+                "/project_previews/ux_case_studies/dr_notii/3.gif",
+                "/project_previews/ux_case_studies/dr_notii/4.gif"
+            ],
+            "researchHero": "/project_previews/ux_case_studies/dr_notii/5_researchHero.webp",
+            "articleSummary": "/project_previews/ux_case_studies/dr_notii/6_articleSummary.webp",
+            "persona1": "/project_previews/ux_case_studies/dr_notii/7_persona1.webp",
+            "persona2": "/project_previews/ux_case_studies/dr_notii/8_persona2.webp",
+            "journeyMap": "/project_previews/ux_case_studies/dr_notii/9_journeyMap.webp",
+            "lofiHero": "/project_previews/ux_case_studies/dr_notii/10_lofiHero.webp",
+            "infoArc": "/project_previews/ux_case_studies/dr_notii/11_infoArc.webp",
+            "userFlow": "/project_previews/ux_case_studies/dr_notii/12_userFlow.webp",
+            "wireframes": [
+                "/project_previews/ux_case_studies/dr_notii/13.webp",
+                "/project_previews/ux_case_studies/dr_notii/14.webp",
+                "/project_previews/ux_case_studies/dr_notii/15.webp"
+            ],
+            "lofiPrototype": [
+                "/project_previews/ux_case_studies/dr_notii/16.webp",
+                "/project_previews/ux_case_studies/dr_notii/17.webp"
+            ],
+            "animatedLofi": "",
+            "hifiHero": "/project_previews/ux_case_studies/dr_notii/18_hifiHero.webp",
+            "styleGuide": [
+                "/project_previews/ux_case_studies/dr_notii/19_styleGuide.webp",
+                "/project_previews/ux_case_studies/dr_notii/20_componentSheet.webp"
+            ],
+            "animatedComponents": "",
+            "hifiMockups": [
+                "/project_previews/ux_case_studies/dr_notii/21.webp",
+                "/project_previews/ux_case_studies/dr_notii/22.webp",
+                "/project_previews/ux_case_studies/dr_notii/23.webp",
+                "/project_previews/ux_case_studies/dr_notii/24.webp",
+                "/project_previews/ux_case_studies/dr_notii/25.webp",
+                "/project_previews/ux_case_studies/dr_notii/26.webp",
+                "/project_previews/ux_case_studies/dr_notii/27.webp",
+                "/project_previews/ux_case_studies/dr_notii/28.webp",
+                "/project_previews/ux_case_studies/dr_notii/29.webp",
+                "/project_previews/ux_case_studies/dr_notii/30.webp",
+                "/project_previews/ux_case_studies/dr_notii/31.webp",
+                "/project_previews/ux_case_studies/dr_notii/32.webp",
+                "/project_previews/ux_case_studies/dr_notii/33.webp",
+                "/project_previews/ux_case_studies/dr_notii/34.webp",
+                "/project_previews/ux_case_studies/dr_notii/35.webp",
+                "/project_previews/ux_case_studies/dr_notii/36.webp",
+                "/project_previews/ux_case_studies/dr_notii/37.webp",
+                "/project_previews/ux_case_studies/dr_notii/38.webp"
+            ],
+            "hifiPrototype": [
+                "/project_previews/ux_case_studies/dr_notii/39.webp",
+                "/project_previews/ux_case_studies/dr_notii/40.webp",
+                "/project_previews/ux_case_studies/dr_notii/41.webp"
+            ],
+            "finalHero": "/project_previews/ux_case_studies/dr_notii/42_finalHero.webp"
         }
     ],
 
