@@ -822,6 +822,6 @@ export default function StellasGarage() {
 
 // LOADER
 export const stellas_garage_loader = async () => {
-  const res = await fetch('http://localhost:4000/ux_case_studies/2');
+  const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/2');
   return res.json();
 }

@@ -152,6 +152,6 @@ export default function BrandDesignProjects() {
 //LOADER FUNCTION
 export const brand_design_page_loader = async ({ params }) => {
     const { id } = params
-    const res = await fetch('http://localhost:4000/brand_designs/' + id);
+    const res = await fetch('https://project-v-backend.vercel.app/brand_designs/' + id);
     return res.json();
 }

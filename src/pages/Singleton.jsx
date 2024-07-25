@@ -505,6 +505,6 @@ export default function Singleton() {
 
 // LOADER
 export const singleton_loader = async () => {
-    const res = await fetch('http://localhost:4000/front_end_projects/3');
+    const res = await fetch('https://project-v-backend.vercel.app/front_end_projects/3');
     return res.json();
 }

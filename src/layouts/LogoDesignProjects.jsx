@@ -126,6 +126,6 @@ export default function LogoDesignProjects() {
 //LOADER FUNCTION
 export const logo_project_page_loader = async ({ params }) => {
     const { id } = params
-    const res = await fetch('http://localhost:4000/logo_designs/' + id);
+    const res = await fetch('https://project-v-backend.vercel.app/logo_designs/' + id);
     return res.json();
 }

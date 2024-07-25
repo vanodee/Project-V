@@ -903,6 +903,6 @@ export default function DrNotii() {
 
 // LOADER
 export const dr_notii_loader = async () => {
-    const res = await fetch('http://localhost:4000/ux_case_studies/3');
+    const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/3');
     return res.json();
 }

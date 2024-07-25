@@ -455,6 +455,6 @@ export default function MyPortfolio() {
 
 // LOADER
 export const my_portfolio_loader = async () => {
-  const res = await fetch('http://localhost:4000/front_end_projects/2');
+  const res = await fetch('https://project-v-backend.vercel.app/front_end_projects/2');
   return res.json();
 }

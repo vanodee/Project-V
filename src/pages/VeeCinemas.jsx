@@ -711,6 +711,6 @@ export default function VeeCinemas() {
 
 // LOADER
 export const vee_cinemas_loader = async () => {
-  const res = await fetch('http://localhost:4000/ux_case_studies/1');
+  const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/1');
   return res.json();
 }
