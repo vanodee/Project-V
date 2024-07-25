@@ -191,26 +191,26 @@ export default function ProjectPreview() {
 
 // LOADER FUNCTIONS
 export const front_end_projects_loader = async () => {
-  const res = await fetch('http://localhost:4000/front_end_projects');
+  const res = await fetch('http://project-v-git-verceldeploy-vanodees-projects.vercel.app/front_end_projects');
   return res.json();
 }
 
 export const ux_case_studies_loader = async () => {
-  const res = await fetch('http://localhost:4000/ux_case_studies');
+  const res = await fetch('http://project-v-git-verceldeploy-vanodees-projects.vercel.app/ux_case_studies');
   return res.json();
 }
 
 export const ui_designs_loader = async () => {
-  const res = await fetch('http://localhost:4000/ui_designs');
+  const res = await fetch('http://project-v-git-verceldeploy-vanodees-projects.vercel.app/ui_designs');
   return res.json();
 }
 
 export const logo_designs_loader = async () => {
-  const res = await fetch('http://localhost:4000/logo_designs');
+  const res = await fetch('http://project-v-git-verceldeploy-vanodees-projects.vercel.app/logo_designs');
   return res.json();
 }
 
 export const brand_designs_loader = async () => {
-  const res = await fetch('http://localhost:4000/brand_designs');
+  const res = await fetch('http://project-v-git-verceldeploy-vanodees-projects.vercel.app/brand_designs');
   return res.json();
 }
