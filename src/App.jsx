@@ -14,6 +14,9 @@ import Contact from './pages/Contact';
 import DrNotii, { dr_notii_loader } from './pages/DrNotii';
 import StellasGarage, { stellas_garage_loader } from './pages/StellasGarage';
 import VeeCinemas, { vee_cinemas_loader } from './pages/VeeCinemas';
+import Singleton, { singleton_loader } from './pages/Singleton';
+import MyPortfolio, { my_portfolio_loader } from './pages/MyPortfolio';
+import LittleLemon from './pages/LittleLemon';
 
 
 // Layouts
@@ -34,13 +37,19 @@ import BrandDesignProjects, { brand_design_page_loader } from './layouts/BrandDe
 
 
 
+
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
 
       <Route path='Projects' element={<ProjectsLayout />}>
-        <Route path='Front_End_Projects' element={<ProjectPreview />} loader={front_end_projects_loader} />
+        <Route path='Front_End_Projects' element={<ProjectPreview />} loader={front_end_projects_loader}>
+          <Route path='singleton_project' element={<Singleton />} loader={singleton_loader} />
+          <Route path='my_portfolio' element={<MyPortfolio />} loader={my_portfolio_loader} />
+          <Route path='little_lemon' element={<LittleLemon />} />
+        </Route>
 
         <Route path='UX_Case_Studies' element={<ProjectPreview />} loader={ux_case_studies_loader}>
           <Route path='dr_notii' element={<DrNotii />} loader={dr_notii_loader} />

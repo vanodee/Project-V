@@ -133,7 +133,7 @@ export default function ProjectPreview() {
                   </Box>
 
                   <Link
-                    to={currentPage === "UX Case Studies" ? selectedProject.pathName : selectedProject.id}
+                    to={currentPage === "UX Case Studies" || "Front End Projects" ? selectedProject.pathName : selectedProject.id}
                     w="100%"
                   >
                     <Button
