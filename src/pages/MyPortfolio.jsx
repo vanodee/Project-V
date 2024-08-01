@@ -17,6 +17,7 @@ import {
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
+import { EndpointVar } from "../components/EndpointVar";
 
 
 
@@ -455,6 +456,6 @@ export default function MyPortfolio() {
 
 // LOADER
 export const my_portfolio_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/front_end_projects/2');
+  const res = await fetch(`${EndpointVar}/front_end_projects/my_portfolio`);
   return res.json();
 }

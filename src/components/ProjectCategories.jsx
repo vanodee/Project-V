@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { Box } from "@chakra-ui/react";
+import { Box, transition } from "@chakra-ui/react";
 
 // Array of Project Categories
 export const projectCategories = [
@@ -27,9 +27,15 @@ export default function ProjectCategories({ ...rest }) {
 
                         _activeLink={{
                             bg: "rgba(0, 0, 0, 0.5)",
+                            _hover: { transform: "translateY(0) scale(1)" },
                         }}
 
-                        _hover={{ bg: "rgba(0, 0, 0, 0.2)" }}
+                        _hover={{
+                            // bg: "rgba(0, 0, 0, 0.2)",
+                            transform: "translateY(-5px) scale(1.2)"
+                        }}
+
+                        transition= "transform 0.3s"
                         {...rest}
                     >
                         {projectCategory.name}

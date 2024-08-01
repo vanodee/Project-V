@@ -15,6 +15,7 @@ import {
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
+import { EndpointVar } from "../components/EndpointVar";
 
 
 
@@ -822,6 +823,6 @@ export default function StellasGarage() {
 
 // LOADER
 export const stellas_garage_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/2');
+  const res = await fetch(`${EndpointVar}/ux_case_studies/stellas_garage`);
   return res.json();
 }

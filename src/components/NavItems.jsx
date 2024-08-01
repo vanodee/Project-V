@@ -25,7 +25,14 @@ export default function NavItem({ ...rest }) {
                         color="white"
                         textShadow="0px 2px rgba(0, 0, 0, 0.8)"
                         borderRadius="0.3rem"
-                        _hover={{ bg: "rgba(0, 0, 0, 0.2)" }}
+
+                        _hover={{
+                            // bg: "rgba(0, 0, 0, 0.2)",
+                            transform: "translateY(-5px) scale(1.2)"
+                        }}
+
+                        transition="transform 0.3s"
+
                         {...rest}
                     >
                         {link.name}
@@ -40,10 +47,19 @@ export default function NavItem({ ...rest }) {
                         color="white"
                         textShadow="0px 2px rgba(0, 0, 0, 0.8)"
                         borderRadius="0.3rem"
+
                         _activeLink={{
                             bg: "rgba(0, 0, 0, 0.5)",
+                            _hover: { transform: "translateY(0) scale(1)" },
                         }}
-                        _hover={{ bg: "rgba(0, 0, 0, 0.2)" }}
+
+                        _hover={{
+                            // bg: "rgba(0, 0, 0, 0.2)",
+                            transform: "translateY(-5px) scale(1.2)"
+                        }}
+
+                        transition="transform 0.3s"
+
                         {...rest}
                     >
                         {link.name}

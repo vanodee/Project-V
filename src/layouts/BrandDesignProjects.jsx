@@ -13,7 +13,8 @@ import {
 import { Link, useLoaderData, useParams } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
-import whiteEmblem from '../assets/emblem_white.webp'
+import { EndpointVar } from "../components/EndpointVar";
+
 
 
 export default function BrandDesignProjects() {
@@ -106,15 +107,15 @@ export default function BrandDesignProjects() {
                     maxW="1200px"
                     p="1rem"
                 >
-                    {brand_design_project.projectImagesL.map((projectImageL) => (
+                    {brand_design_project.projectImagesL.map((projectImageL, index) => (
                         <GridItem
-                            key={projectImageL.id}
+                            key={index}
                             colSpan={{ base: '4', md: '8', xl:'12' }}
                             overflow="hidden"
                         >
                             <Image
                                 src={projectImageL}
-                                alt={`Image ${projectImageL.id + 1}`}
+                                alt={`${brand_design_project.title} Landscape Image ${index}`}
                                 objectFit="cover"
                                 borderRadius="md"
                                 w="100%"
@@ -122,15 +123,15 @@ export default function BrandDesignProjects() {
                         </GridItem>
                     ))}
 
-                    {brand_design_project.projectImagesP.map((projectImageP) => (
+                    {brand_design_project.projectImagesP.map((projectImageP, index) => (
                         <GridItem
-                            key={projectImageP.id}
+                            key={index}
                             colSpan="4"
                             overflow="hidden"
                         >
                             <Image
                                 src={projectImageP}
-                                alt={`Image ${projectImageP.id + 1}`}
+                                alt={`${brand_design_project.title} Portrait Image ${index}`}
                                 objectFit="cover"
                                 borderRadius="md"
                                 w="100%"
@@ -152,6 +153,6 @@ export default function BrandDesignProjects() {
 //LOADER FUNCTION
 export const brand_design_page_loader = async ({ params }) => {
     const { id } = params
-    const res = await fetch('https://project-v-backend.vercel.app/brand_designs/' + id);
+    const res = await fetch(`${EndpointVar}/brand_designs/${id}`);
     return res.json();
 }

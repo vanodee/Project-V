@@ -11,7 +11,8 @@ import {
 import { Link, useLoaderData, useParams } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
-import whiteEmblem from '../assets/emblem_white.webp'
+import { EndpointVar } from "../components/EndpointVar";
+
 
 
 export default function LogoDesignProjects() {
@@ -102,11 +103,11 @@ export default function LogoDesignProjects() {
                 </Stack>
 
                 {
-                    logo_project.projectImages.map((projectImage) => (
+                    logo_project.projectImages.map((projectImage, index) => (
                         <Image
-                            key={projectImage.id}
+                            key={index}
                             src={projectImage}
-                            alt={`${logo_project.title} image ${projectImage.id}`}
+                            alt={`${logo_project.title} image ${index}`}
                             borderRadius="1rem"
                             maxW="1200px"
                             w="95%"
@@ -126,6 +127,6 @@ export default function LogoDesignProjects() {
 //LOADER FUNCTION
 export const logo_project_page_loader = async ({ params }) => {
     const { id } = params
-    const res = await fetch('https://project-v-backend.vercel.app/logo_designs/' + id);
-    return res.json();
+    const res = await fetch(`${EndpointVar}/logo_designs/${id}`);
+    return await res.json();
 }

@@ -13,6 +13,7 @@ import {
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 import { Link, useLoaderData, useLocation, useOutletContext, Outlet } from "react-router-dom"
 import { useEffect, useState } from 'react';
+import { EndpointVar } from "./EndpointVar";
 
 
 
@@ -133,7 +134,7 @@ export default function ProjectPreview() {
                   </Box>
 
                   <Link
-                    to={currentPage === "UX Case Studies" || "Front End Projects" ? selectedProject.pathName : selectedProject.id}
+                    to={selectedProject.id}
                     w="100%"
                   >
                     <Button
@@ -191,26 +192,26 @@ export default function ProjectPreview() {
 
 // LOADER FUNCTIONS
 export const front_end_projects_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/front_end_projects');
+  const res = await fetch(`${EndpointVar}/front_end_projects`);
   return res.json();
 }
 
 export const ux_case_studies_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies');
+  const res = await fetch(`${EndpointVar}/ux_case_studies`);
   return res.json();
 }
 
 export const ui_designs_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/ui_designs');
+  const res = await fetch(`${EndpointVar}/ui_designs`);
   return res.json();
 }
 
 export const logo_designs_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/logo_designs');
+  const res = await fetch(`${EndpointVar}/logo_designs`);
   return res.json();
 }
 
 export const brand_designs_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/brand_designs');
+  const res = await fetch(`${EndpointVar}/brand_designs`);
   return res.json();
 }

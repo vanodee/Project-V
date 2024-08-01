@@ -17,6 +17,7 @@ import {
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
+import { EndpointVar } from "../components/EndpointVar";
 
 
 
@@ -505,6 +506,6 @@ export default function Singleton() {
 
 // LOADER
 export const singleton_loader = async () => {
-    const res = await fetch('https://project-v-backend.vercel.app/front_end_projects/3');
+    const res = await fetch(`${EndpointVar}/front_end_projects/singleton_project`);
     return res.json();
 }

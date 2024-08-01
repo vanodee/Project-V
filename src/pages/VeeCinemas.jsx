@@ -15,6 +15,7 @@ import {
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
+import { EndpointVar } from "../components/EndpointVar";
 
 
 
@@ -711,6 +712,6 @@ export default function VeeCinemas() {
 
 // LOADER
 export const vee_cinemas_loader = async () => {
-  const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/1');
+  const res = await fetch(`${EndpointVar}/ux_case_studies/vee_cinemas`);
   return res.json();
 }

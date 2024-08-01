@@ -17,6 +17,8 @@ import {
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
 import ProjectFooter from "../components/ProjectFooter";
+import { EndpointVar } from "../components/EndpointVar";
+
 
 
 
@@ -903,6 +905,6 @@ export default function DrNotii() {
 
 // LOADER
 export const dr_notii_loader = async () => {
-    const res = await fetch('https://project-v-backend.vercel.app/ux_case_studies/3');
+    const res = await fetch(`${EndpointVar}/ux_case_studies/dr_notii`);
     return res.json();
 }
