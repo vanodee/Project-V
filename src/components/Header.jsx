@@ -23,6 +23,12 @@ export default function Header() {
                     src={Logo}
                     alt='Stevano Peters Logo'
                     h={{ base: '100%', md: '2.5rem', lg: '3rem' }}
+                    transition="transform 0.3s"
+
+                    _hover={{
+                        // bg: "rgba(0, 0, 0, 0.2)",
+                        transform: "translateY(5px) translateX(5px) scale(1.2)"
+                    }}
                 />
             </NavLink>
 

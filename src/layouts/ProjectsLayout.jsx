@@ -37,15 +37,21 @@ export default function ProjectsLayout() {
 
   //TRACKS THE TITLE OF THE CURRENT WEBPAGE
   useEffect(() => {
-    const pathParts = location.pathname.split("/")        // Return the path as an array removing the "/"
-      .filter(pathPart => pathPart !== '');               // Filter out all empty strings and spaces from the array
-    const lastPart = pathParts[pathParts.length - 1];     // Return the last item in the array (array.length - 1)
-    const formattedName = lastPart.replace(/_/g, " ");    // Replace underscores with spaces
+    const pathParts = location.pathname.split("/")
+      .filter(pathPart => pathPart !== ''); // Split the path and filter out empty strings
 
-    setCurrentPage(formattedName)
-    setpathArraySize(pathParts.length)    // This stores the length of the path array
-    // console.log( "Parent: ", formattedName)
-  },[location])
+    if (pathParts.length > 0) {
+      const lastPart = pathParts[pathParts.length - 1]; // Safely get the last part of the path
+      const formattedName = lastPart.replace(/_/g, " "); // Replace underscores with spaces
+
+      setCurrentPage(formattedName);
+      setpathArraySize(pathParts.length);
+    } else {
+      setCurrentPage(""); // Set to an empty string if there are no valid path parts
+      setpathArraySize(0);
+    }
+  }, [location]);
+
 
 
   return (
@@ -77,7 +83,7 @@ export default function ProjectsLayout() {
         </>
       )}
 
-      <Outlet context={[pathArraySize, currentPage]} />
+      <Outlet />
 
       {currentPage === "Projects" && (
         <Flex

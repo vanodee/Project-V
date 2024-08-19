@@ -20,7 +20,7 @@ export default function NavItem({ ...rest }) {
                         key={link.id}
                         href={link.path}
                         isExternal
-                        px="1.2rem"
+                        px="2rem"
                         py="0.3rem"
                         color="white"
                         textShadow="0px 2px rgba(0, 0, 0, 0.8)"

@@ -1,5 +1,17 @@
-import { Box, Button, Grid, GridItem, HStack, Text, Image, VStack, Heading } from "@chakra-ui/react"
-import HeroImage from '../assets/hero_image.webp'
+import {
+  Box,
+  Button,
+  Grid,
+  GridItem,
+  HStack,
+  Text,
+  Image,
+  VStack,
+  Heading,
+  keyframes
+} from "@chakra-ui/react"
+import HeroImage2 from '../assets/hero_image_2.webp'
+import HeroShadow from '../assets/hero_shadow.webp'
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 
 //IMPORT LOGOS
@@ -13,6 +25,29 @@ import ReactLogo from '../assets/React.webp'
 import VScode from '../assets/VS Code.webp'
 import WordPress from '../assets/WordPress.webp'
 
+
+
+// Animation Keyframes ------------------------------------------
+const levitate = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-13px);
+  }
+`;
+
+const levitate_shadow = keyframes`
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+`;
+// --------------------------------------------------------------
 
 
 export default function Home() {
@@ -61,30 +96,46 @@ export default function Home() {
 
 
   return (
-    <Box h={'100dvh'} >
+    <Box h={'100dvh'}>
       {/* HERO SECTION -----------------------------*/}
       <Box
-        h={{base:'57dvh', md:'75dvh'}}
-        display={'flex'}
-        alignItems={'end'}
-        justifyContent={'center'}
+        h={{ base: '57dvh', md: '75dvh' }}
+        display='flex'
+        flexDir="column"
+        alignItems='center'
+        justifyContent='end'
       >
-        <Image
-          src={HeroImage}
-          h={{base:'40dvh', md:'60dvh'}}
-        />
+        <VStack
+          h={{ base: '40dvh', md: '60dvh' }}
+          spacing="0"
+        // bg={"pink"}
+        >
+          <Image
+            src={HeroImage2}
+            h="90%"
+            mb="-1rem"
+            animation={`${levitate} 3s ease-in-out infinite`}
+          // bg={"red"}
+          />
+          <Image
+            src={HeroShadow}
+            h="13%"
+            animation={`${levitate_shadow} 3s ease-in-out infinite`}
+          // bg={"blue"}
+          />
+        </VStack>
       </Box>
 
       {/* INFO SECTION -----------------------------*/}
       <Box
-        h={{base:'43dvh', md:'25dvh'}}
+        h={{ base: '43dvh', md: '25dvh' }}
         display={'flex'}
         alignItems={'center'}
         justifyContent={'center'}
       >
         <Grid
           templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
-          w={{base:'500px', md:'700px', lg:'800px'}}
+          w={{ base: '500px', md: '700px', lg: '800px' }}
           gap={'1rem'}
           px={'1rem'}
           alignItems={'center'}
@@ -101,7 +152,7 @@ export default function Home() {
               justifyContent={'center'}
             >
               <Heading
-                fontSize={{base:"0.7rem", lg:"1rem"}}
+                fontSize={{ base: "0.7rem", lg: "1rem" }}
                 color={'white'}
                 textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 transform='rotate(-90deg)'
@@ -170,7 +221,7 @@ export default function Home() {
                   <Image
                     key={toolkitLogo.id}
                     src={toolkitLogo.logo}
-                    h={{ base: "1.5rem", lg:"2rem" }}
+                    h={{ base: "1.5rem", lg: "2rem" }}
                     px={{ base: '0.2rem', lg: '1rem' }}
                   />
                 ))
