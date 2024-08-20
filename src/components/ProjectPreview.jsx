@@ -51,7 +51,6 @@ export default function ProjectPreview() {
   const projects = useLoaderData() || [];
   const [selectedProject, setSelectedProject] = useState(null);
   const [previewColor, setPreviewColor] = useState(null);
-  // const [pathArraySize, currentPage] = useOutletContext();
   const [pathArraySize, setpathArraySize] = useState(null)
 
   useEffect(() => {

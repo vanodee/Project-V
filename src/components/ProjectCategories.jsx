@@ -26,7 +26,7 @@ export default function ProjectCategories({ ...rest }) {
                         borderRadius="0.3rem"
 
                         _activeLink={{
-                            bg: "rgba(0, 0, 0, 0.5)",
+                            bg: "rgba(0, 0, 0, 0.6)",
                             _hover: { transform: "translateY(0) scale(1)" },
                         }}
 

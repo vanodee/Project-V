@@ -8,6 +8,7 @@ import {
   Image,
   VStack,
   Heading,
+  useMediaQuery,
   keyframes
 } from "@chakra-ui/react"
 import HeroImage2 from '../assets/hero_image_2.webp'
@@ -24,6 +25,7 @@ import Photoshop from '../assets/Photoshop.webp'
 import ReactLogo from '../assets/React.webp'
 import VScode from '../assets/VS Code.webp'
 import WordPress from '../assets/WordPress.webp'
+import { Link } from "react-router-dom"
 
 
 
@@ -52,52 +54,27 @@ const levitate_shadow = keyframes`
 
 export default function Home() {
 
+  const [isPortrait] = useMediaQuery("(orientation: portrait)");
+
   const certifiedLogos = [
-    {
-      id: 1,
-      logo: Google
-    },
-    {
-      id: 2,
-      logo: Meta
-    },
+    { id: 1, logo: Google },
+    { id: 2, logo: Meta },
   ];
 
   const toolkitLogos = [
-    {
-      id: 1,
-      logo: ReactLogo
-    },
-    {
-      id: 2,
-      logo: JavaScript
-    },
-    {
-      id: 3,
-      logo: VScode
-    },
-    {
-      id: 4,
-      logo: WordPress
-    },
-    {
-      id: 5,
-      logo: Figma
-    },
-    {
-      id: 6,
-      logo: Photoshop
-    },
-    {
-      id: 7,
-      logo: Illustrator
-    },
+    { id: 1, logo: ReactLogo },
+    { id: 2, logo: JavaScript },
+    { id: 3, logo: VScode },
+    { id: 4, logo: WordPress },
+    { id: 5, logo: Figma },
+    { id: 6, logo: Photoshop },
+    { id: 7, logo: Illustrator },
   ];
 
 
   return (
     <Box h={'100dvh'}>
-      {/* HERO SECTION -----------------------------*/}
+      {/* HERO SECTION ----------------------------------------------------------------*/}
       <Box
         h={{ base: '57dvh', md: '75dvh' }}
         display='flex'
@@ -126,34 +103,35 @@ export default function Home() {
         </VStack>
       </Box>
 
-      {/* INFO SECTION -----------------------------*/}
+
+      {/* INFO SECTION ----------------------------------------------------------------*/}
       <Box
         h={{ base: '43dvh', md: '25dvh' }}
-        display={'flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
+        display='flex'
+        alignItems='center'
+        justifyContent='center'
       >
         <Grid
-          templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(8, 1fr)' }}
-          w={{ base: '500px', md: '700px', lg: '800px' }}
-          gap={'1rem'}
-          px={'1rem'}
-          alignItems={'center'}
+          templateColumns={{ base: 'repeat(4, 1fr)', md: 'repeat(10, 1fr)' }}
+          w={{ base: '500px', md: '700px', lg: '1000px' }}
+          gap='1rem'
+          px='1rem'
+          alignItems='center'
         >
           <GridItem
             colSpan={{ base: '1', md: '2' }}
-            borderRadius={'20px'}
+            borderRadius='20px'
             bgColor='rgba(0, 0, 0, 0.5)'
             h='100%'
             py='0.5rem'
-            alignContent={'center'}
+            alignContent='center'
           >
             <HStack
-              justifyContent={'center'}
+              justifyContent='center'
             >
               <Heading
                 fontSize={{ base: "0.7rem", lg: "1rem" }}
-                color={'white'}
+                color='white'
                 textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 transform='rotate(-90deg)'
                 mx='-1.5rem'
@@ -177,20 +155,20 @@ export default function Home() {
 
           <GridItem
             colSpan={{ base: '3' }}
-            borderRadius={'20px'}
+            borderRadius='20px'
             bgColor='rgba(0, 0, 0, 0.5)'
             py="0.5rem"
             h='100%'
           >
             <Box
-              h={'100%'}
-              display={'flex'}
-              alignItems={'center'}
-              justifyContent={'center'}
+              h='100%'
+              display='flex'
+              alignItems='center'
+              justifyContent='center'
             >
               <Heading
                 fontSize={{ md: '1rem', lg: '1.3rem' }}
-                color={'white'}
+                color='white'
                 textShadow='0px 2px rgba(0, 0, 0, 0.8)'
               >
                 <ul>
@@ -204,29 +182,69 @@ export default function Home() {
 
           <GridItem
             colSpan={{ base: '4', md: '3' }}
-            borderRadius={'20px'}
+            borderRadius='20px'
             bgColor='rgba(0, 0, 0, 0.5)'
             h='100%'
             py='1rem'
           >
             <Box
-              h={'100%'}
-              display={'flex'}
-              flexWrap={'wrap'}
-              alignItems={'center'}
-              justifyContent={'center'}
+              h='100%'
+              display='flex'
+              flexWrap='wrap'
+              alignItems='center'
+              justifyContent="center"
             >
               {
                 toolkitLogos.map((toolkitLogo) => (
                   <Image
                     key={toolkitLogo.id}
                     src={toolkitLogo.logo}
-                    h={{ base: "1.5rem", lg: "2rem" }}
-                    px={{ base: '0.2rem', lg: '1rem' }}
+                    h={{
+                      base: (isPortrait ? "2rem" : "1.5rem"),
+                      lg: "2rem"
+                    }}
+                    px={{
+                      base: (isPortrait ? "0.3rem" : '0.5rem'),
+                      lg: '1rem'
+                    }}
                   />
                 ))
               }
             </Box>
+          </GridItem>
+
+          <GridItem
+            colSpan={{ base: '4', md: '2' }}
+            borderRadius='20px'
+            border="0.2rem solid rgba(0, 0, 0, 0.5)"
+            py="0.5rem"
+            h='100%'
+
+            _hover={{
+              transform: "translateX(10px) scale(1.05)",
+            }}
+
+            transition="transform 0.3s"
+          >
+            <HStack
+              as={Link}
+              to="Projects"
+              color="rgba(0, 0, 0, 0.5)"
+              h='100%'
+              justifyContent='center'
+              py="0.2rem"
+            >
+              <Heading
+                fontSize={{
+                  base: (isPortrait ? '1.3rem' : "1rem"),
+                  lg:"1.3rem"
+                }}
+              >
+                Projects
+              </Heading>
+
+              <ArrowForwardIcon fontSize="x-large" />
+            </HStack>
           </GridItem>
 
         </Grid>

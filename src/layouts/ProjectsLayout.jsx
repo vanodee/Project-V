@@ -16,7 +16,7 @@ import {
   Flex
 } from "@chakra-ui/react"
 
-import { Outlet, useLocation } from "react-router-dom"
+import { Outlet, useLocation, useNavigation } from "react-router-dom"
 import { TriangleUpIcon } from "@chakra-ui/icons";
 import { useEffect, useRef, useState } from "react";
 
@@ -33,6 +33,7 @@ export default function ProjectsLayout() {
   const [currentPage, setCurrentPage] = useState(null)
   const [pathArraySize, setpathArraySize] = useState(null)
   const location = useLocation()
+  const navigation = useNavigation()
 
 
   //TRACKS THE TITLE OF THE CURRENT WEBPAGE
@@ -62,12 +63,12 @@ export default function ProjectsLayout() {
             position="fixed"
             top="15dvh"
             px="1rem"
-            opacity="0.3"
+            opacity={navigation.state === "loading" ? "0.1" : "0.3"}
             textAlign="center"
             w="100dvw"
             fontSize={{ base: "4rem", lg: "5rem" }}
           >
-            {currentPage}
+            {navigation.state === "loading" ? "loading..." : currentPage}
           </Heading>
 
           <Image
@@ -83,7 +84,12 @@ export default function ProjectsLayout() {
         </>
       )}
 
-      <Outlet />
+      <Box
+        opacity={navigation.state === "loading" ? "0.3" : "1"}
+      >
+        <Outlet />
+      </Box>
+      {/* <Outlet /> */}
 
       {currentPage === "Projects" && (
         <Flex
@@ -91,7 +97,7 @@ export default function ProjectsLayout() {
           top="50%"
           left="50%"
           transform="translate(-50%, -50%)"
-          bg='rgba(0,0,0,0.15)'
+          bg='rgba(0,0,0,0.3)'
           backdropFilter='auto'
           backdropBlur='15px'
           borderRadius="1rem"
@@ -129,7 +135,7 @@ export default function ProjectsLayout() {
             spacing={2}
             p='0.5rem'
             borderRadius='0.5rem'
-            bgColor='rgba(0, 0, 0, 0.2)'
+            bgColor='rgba(0, 0, 0, 0.3)'
             backdropFilter='auto'
             backdropBlur='8px'
           >

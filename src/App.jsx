@@ -32,6 +32,7 @@ import ProjectPreview, {
 } from './components/ProjectPreview';
 import LogoDesignProjects, { logo_project_page_loader } from './layouts/LogoDesignProjects';
 import BrandDesignProjects, { brand_design_page_loader } from './layouts/BrandDesignProjects';
+import ErrorPage from './components/ErrorPage';
 
 
 
@@ -41,7 +42,7 @@ import BrandDesignProjects, { brand_design_page_loader } from './layouts/BrandDe
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<RootLayout />}>
+    <Route path='/' element={<RootLayout />} errorElement={<ErrorPage />}>
       <Route index element={<Home />} />
 
       <Route path='Projects' element={<ProjectsLayout />}>

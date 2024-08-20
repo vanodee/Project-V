@@ -32,7 +32,7 @@ export default function Nav() {
                 p='0.5rem'
                 h="fit-content"
                 borderRadius='0.5rem'
-                bgColor='rgba(0, 0, 0, 0.25)'
+                bgColor='rgba(0, 0, 0, 0.4)'
                 backdropFilter='auto'
                 backdropBlur='8px'
             >

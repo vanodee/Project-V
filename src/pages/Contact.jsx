@@ -18,7 +18,7 @@ export default function Contact() {
 
   const [isPortrait] = useMediaQuery("(orientation: portrait)");
   const [isLandscape] = useMediaQuery("(orientation: landscape)");
-  // const [isSquare] = useMediaQuery("(aspect-ratio: 1/1)");
+
 
   const [formWasSubmitted, setFormWasSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
@@ -57,6 +57,16 @@ export default function Contact() {
       overflowY="scroll"
       h='100dvh'
       pt="15dvh"
+
+      // I used this to hide the scrollbar but keep scroll functionality
+      sx={{
+        '::-webkit-scrollbar': {
+          display: 'none',
+        },
+        'msOverflowstyle': 'none', // For Internet Explorer and Edge
+        'scrollbarWidth': 'none', // For Firefox
+      }}
+      // ---------------------------------------------------------------
     >
       <VStack
         spacing="3rem"
