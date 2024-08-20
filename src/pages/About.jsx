@@ -53,7 +53,8 @@ export default function About() {
 
         <VStack
           spacing="1rem"
-          bgGradient='linear(to-br, rgba(0,0,0,0.45), rgba(0,0,0,0.85))'
+          // bgGradient='linear(to-br, rgba(0,0,0,0.45), rgba(0,0,0,0.85))'
+          bgColor='rgba(0, 0, 0, 0.7)'
           backdropFilter='auto'
           backdropBlur='15px'
           borderRadius="1rem"

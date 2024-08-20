@@ -45,7 +45,6 @@ const levitate_shadow = keyframes`
 export default function ProjectPreview() {
 
   const [isPortrait] = useMediaQuery("(orientation: portrait)");
-  const [isLandscape] = useMediaQuery("(orientation: landscape)");
 
   const location = useLocation();
   const projects = useLoaderData() || [];
@@ -113,13 +112,13 @@ export default function ProjectPreview() {
                   }}
                   direction={isPortrait ? "column" : "row"}
                   spacing="1rem"
-                  bgGradient='linear(to-br, rgba(0,0,0,0.05), rgba(0,0,0,0.85))'
+                  // bgGradient='linear(to-br, rgba(0,0,0,0.05), rgba(0,0,0,0.85))'
+                  bgColor='rgba(0, 0, 0, 0.7)'
                   backdropFilter='auto'
                   backdropBlur='8px'
                   borderRadius="1rem"
                   p="0.5rem"
                   mx="1rem"
-                  // animation={`${levitate} 4s ease-in-out infinite`}
 
                   //Animation Controls -----------------------------------------
                   as={motion.div}
@@ -190,7 +189,7 @@ export default function ProjectPreview() {
                         w="100%"
                         variant="outline"
                         size={{
-                          base: "sm",
+                          base: "md",
                           md: (isPortrait ? "lg" : "sm"),
                           lg: "lg"
                         }}

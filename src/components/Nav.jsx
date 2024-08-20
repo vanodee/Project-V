@@ -43,7 +43,7 @@ export default function Nav() {
                 aria-label='Open Navigation'
                 ref={btnRef}
                 color='white'
-                bg='rgba(0, 0, 0, 0.2)'
+                bg='rgba(0, 0, 0, 0.4)'
                 onClick={onOpen}
                 display={{ base: "block", md: "block", lg: "none" }}
                 icon={<HamburgerIcon />}
@@ -58,9 +58,9 @@ export default function Nav() {
             >
                 <DrawerOverlay />
                 <DrawerContent
-                    bg='rgba(0, 0, 0, 0.7)'
+                    bg='rgba(0, 0, 0, 0.55)'
                     backdropFilter='auto'
-                    backdropBlur='8px'
+                    backdropBlur='20px'
                 >
 
                     <DrawerCloseButton color='white' h='30px'/>

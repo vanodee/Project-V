@@ -53,6 +53,13 @@ export default function ImageCarousel() {
                 onClick={prevSlide}
                 aria-label="Previous Slide"
                 colorScheme="blackAlpha"
+                color="white"
+                bgColor='rgba(0, 0, 0, 0.4)'
+
+                _hover={{
+                    transform: "translateY(-50%) scale(1.5)"
+                }}
+                transition="transform 0.3s"
             />
 
             <IconButton
@@ -64,6 +71,13 @@ export default function ImageCarousel() {
                 onClick={nextSlide}
                 aria-label="Next Slide"
                 colorScheme="blackAlpha"
+                color="white"
+                bgColor='rgba(0, 0, 0, 0.4)'
+
+                _hover={{
+                    transform: "translateY(-50%) scale(1.5)"
+                }}
+                transition="transform 0.3s"
             />
 
         </Box>

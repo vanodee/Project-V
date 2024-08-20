@@ -13,7 +13,8 @@ import {
   DrawerCloseButton,
   useDisclosure,
   Heading,
-  Flex
+  Flex,
+  useMediaQuery
 } from "@chakra-ui/react"
 
 import { Outlet, useLocation, useNavigation } from "react-router-dom"
@@ -27,6 +28,8 @@ import ProjectCategories from "../components/ProjectCategories"
 
 
 export default function ProjectsLayout() {
+
+  const [isPortrait] = useMediaQuery("(orientation: portrait)");
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = useRef()
 
@@ -66,7 +69,12 @@ export default function ProjectsLayout() {
             opacity={navigation.state === "loading" ? "0.1" : "0.3"}
             textAlign="center"
             w="100dvw"
-            fontSize={{ base: "4rem", lg: "5rem" }}
+            fontSize={{
+              base: (isPortrait ? "2.5rem" : "3rem"),
+              md: "3rem",
+              lg: "4rem",
+              xl: "5rem"
+            }}
           >
             {navigation.state === "loading" ? "loading..." : currentPage}
           </Heading>
@@ -89,7 +97,6 @@ export default function ProjectsLayout() {
       >
         <Outlet />
       </Box>
-      {/* <Outlet /> */}
 
       {currentPage === "Projects" && (
         <Flex
@@ -105,9 +112,14 @@ export default function ProjectsLayout() {
           mx="auto"
           textColor="white"
           textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+          opacity={navigation.state === "loading" ? "0.3" : "1"}
         >
           <Heading
-            size={{ base: "lg" }}
+            fontSize={{
+              base: "1.3rem",
+              // md: "2rem",
+              lg: "2rem"
+            }}
             textAlign="center"
           >
             Please select a category below
@@ -147,7 +159,7 @@ export default function ProjectsLayout() {
             ref={btnRef}
             onClick={onOpen}
             color='white'
-            bg='rgba(0, 0, 0, 0.1)'
+            bg='rgba(0, 0, 0, 0.3)'
             display={{ base: "flex", lg: "none" }}
             textShadow='0px 2px rgba(0, 0, 0, 0.8)'
             size={{ base: 'md', lg: 'lg' }}
@@ -164,9 +176,9 @@ export default function ProjectsLayout() {
           >
             <DrawerOverlay />
             <DrawerContent
-              bg='rgba(0, 0, 0, 0.7)'
+              bg='rgba(0, 0, 0, 0.55)'
               backdropFilter='auto'
-              backdropBlur='8px'
+              backdropBlur="20px"
             >
 
               <DrawerCloseButton color='white' h='30px' />
