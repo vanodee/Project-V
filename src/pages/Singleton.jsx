@@ -130,8 +130,8 @@ export default function Singleton() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Hero+Image"
-                    // src={projectImages.heroImage}
+                    // src="https://via.placeholder.com/800x400?text=Hero+Image"
+                    src={projectImages.heroImage}
                     sx={sectionImage}
                 />
 
@@ -242,8 +242,8 @@ export default function Singleton() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Hero"
-                    // src={projectImages.researchHero}
+                    // src="https://via.placeholder.com/800x400?text=Section+Hero"
+                    src={projectImages.hero2}
                     sx={sectionImage}
                 />
 
@@ -287,7 +287,7 @@ export default function Singleton() {
                 </Text>
 
 
-                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                {/* <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
                     sx={subSectionImageContainer}
                 >
                     <Image
@@ -297,7 +297,7 @@ export default function Singleton() {
                     />
 
                     <Text>Some HDYS Campaign Infographics provided by the client</Text>
-                </VStack>
+                </VStack> */}
 
 
                 <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
@@ -373,8 +373,8 @@ export default function Singleton() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Mobile+Overview"
-                        // src={projectImages.journeyMap}
+                        // src="https://via.placeholder.com/800x400?text=Mobile+Overview"
+                        src={projectImages.mobileUI}
                         sx={subSectionImage}
                     />
 
@@ -406,8 +406,8 @@ export default function Singleton() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Mobile+Overview"
-                        // src={projectImages.journeyMap}
+                        // src="https://via.placeholder.com/800x400?text=Mobile+Overview"
+                        src={projectImages.bookingImg}
                         sx={subSectionImage}
                     />
 
@@ -435,8 +435,8 @@ export default function Singleton() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    src="https://via.placeholder.com/800x400?text=Section+Hero"
-                    // src={projectImages.researchHero}
+                    // src="https://via.placeholder.com/800x400?text=Section+Hero"
+                    src={projectImages.hero3}
                     sx={sectionImage}
                 />
 
