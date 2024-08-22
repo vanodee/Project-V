@@ -46,7 +46,7 @@ export default function RootLayout() {
                 </Box>
 
                 <Box
-                    bgGradient='linear(to-br, rgba(255,255,255,0.2), rgba(0,0,0,0.4))'
+                    bgGradient='linear(to-br, rgba(221,221,221,1), rgba(114,114,114,1))'
                     filter='auto'
                     blur='3px'
                     w="100%"
