@@ -12,7 +12,8 @@ import {
     ListItem,
     Grid,
     GridItem,
-    useMediaQuery
+    useMediaQuery,
+    AspectRatio
 } from "@chakra-ui/react";
 import { Link, useLoaderData } from "react-router-dom"
 import { ArrowBackIcon } from "@chakra-ui/icons";
@@ -130,7 +131,6 @@ export default function Singleton() {
 
 
                 <Image //SECTION IMAGE ------------------------------------------------------------------
-                    // src="https://via.placeholder.com/800x400?text=Hero+Image"
                     src={projectImages.heroImage}
                     sx={sectionImage}
                 />
@@ -227,9 +227,10 @@ export default function Singleton() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Animation"
-                        // src={projectImages.splashImage}
-                        sx={subSectionImage}
+                        src={projectImages.animation}
+                        h="90dvh"
+                        borderRadius="1rem"
+                        objectFit="contain"
                     />
                 </VStack>
 
@@ -241,8 +242,7 @@ export default function Singleton() {
                 </Heading>
 
 
-                <Image //SECTION IMAGE ------------------------------------------------------------------
-                    // src="https://via.placeholder.com/800x400?text=Section+Hero"
+                <Image //SECTION IMAGE -----------------------------------------------------------------
                     src={projectImages.hero2}
                     sx={sectionImage}
                 />
@@ -269,8 +269,12 @@ export default function Singleton() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Initial+Figma+Designs"
-                        // src={projectImages.journeyMap}
+                        src={projectImages.initialFigma}
+                        sx={subSectionImage}
+                    />
+
+                    <Image
+                        src={projectImages.initialWeb}
                         sx={subSectionImage}
                     />
 
@@ -287,25 +291,12 @@ export default function Singleton() {
                 </Text>
 
 
-                {/* <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
-                    sx={subSectionImageContainer}
-                >
-                    <Image
-                        src="https://via.placeholder.com/800x400?text=HDYS+Campaign+Infographics"
-                        // src={projectImages.journeyMap}
-                        sx={subSectionImage}
-                    />
-
-                    <Text>Some HDYS Campaign Infographics provided by the client</Text>
-                </VStack> */}
-
 
                 <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Refined+Website+Design"
-                        // src={projectImages.journeyMap}
+                        src={projectImages.refinedWeb}
                         sx={subSectionImage}
                     />
 
@@ -340,12 +331,11 @@ export default function Singleton() {
                     sx={subSectionImageContainer}
                 >
                     <Image
-                        src="https://via.placeholder.com/800x400?text=Google+Scripts+Showcase"
-                        // src={projectImages.journeyMap}
+                        src={projectImages.googleScripts}
                         sx={subSectionImage}
                     />
 
-                    <Text>Data from the website being securely sent to a Google Sheets file</Text>
+                    <Text>Data from the website is securely sent to a Google Sheets file</Text>
                 </VStack>
 
 
@@ -414,16 +404,35 @@ export default function Singleton() {
                     <Text>Successful Booking Modal</Text>
                 </VStack>
 
-                <VStack    //IMAGE WITH CAPTION ------------------------------------------------------------------
+                <VStack    //VIDEO WITH CAPTION ------------------------------------------------------------------
                     sx={subSectionImageContainer}
                 >
-                    <Image
-                        src="https://via.placeholder.com/800x400?text=Mobile+Overview"
-                        // src={projectImages.journeyMap}
-                        sx={subSectionImage}
-                    />
+                    <Box
+                        position="relative"
+                        width="100%"
+                        paddingBottom="56.25%" // 16:9 aspect ratio
+                        overflow="hidden"
+                    >
+                        <Box
+                            position="absolute"
+                            top="0"
+                            left="0"
+                            width="100%"
+                            height="100%"
+                            borderRadius="0.5rem"
+                            overflow="hidden"
+                        >
+                            <iframe
+                                src={projectImages.bookingVid}
+                                allow="autoplay"
+                                allowFullScreen
+                                title="HDYS Booking System in action"
+                                style={{ width: '100%', height: '100%' }}
+                            />
+                        </Box>
+                    </Box>
 
-                    <Text>Booking System in action/Mixologists at the Cocktail Stand</Text>
+                    <Text>Booking System in action / Mixologists at the Cocktail Stand</Text>
                 </VStack>
 
 
