@@ -37,31 +37,6 @@ export default function LogoDesignProjects() {
             bgGradient='linear(to-br, rgba(255,255,255,0.3), rgba(0,0,0,0.5))'
             overflow="hidden"
         >
-            <Link to="..">
-                <HStack
-                    display={{ base: "none", lg: "flex" }}
-                    spacing="1rem"
-                    position="fixed"
-                    top="10%"
-                    left="0%"
-                    bg='rgba(0,0,0,0.3)'
-                    backdropFilter='auto'
-                    backdropBlur='15px'
-                    borderBottomRightRadius="0.5rem"
-                    borderTopRightRadius="0.5rem"
-                    p={{md:"1rem"}}
-                    textColor="white"
-                    textShadow='0px 2.3px rgba(0, 0, 0, 0.8)'
-                >
-                    <IconButton
-                        variant="outline"
-                        colorScheme="white"
-                        icon={<ArrowBackIcon />}
-                    />
-                    <Heading size={{lg:"md"}}>{logo_project.title}</Heading>
-                </HStack>
-            </Link>
-
             <VStack
                 h="100dvh"
                 bg={logo_project.previewColor}
@@ -78,7 +53,7 @@ export default function LogoDesignProjects() {
                 />
 
                 <Stack
-                    bgGradient='linear(to-br, rgba(0,0,0,0.3), rgba(0,0,0,0.85))'
+                    bgColor='rgba(0, 0, 0, 0.7)'
                     direction={{ base: "column", lg: "row" }}
                     spacing={10}
                     color="white"

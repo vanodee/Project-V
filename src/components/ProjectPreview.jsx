@@ -7,6 +7,7 @@ import {
   Button,
   Text,
   Box,
+  Link as ChakraLink,
   keyframes,
   useMediaQuery
 } from "@chakra-ui/react";
@@ -181,26 +182,51 @@ export default function ProjectPreview() {
                       </Text>
                     </Box>
 
-                    <Link
-                      to={selectedProject.id}
-                      w="100%"
-                    >
-                      <Button
+                    {/* CONDITIONALLY RENDER THE BUITON (LITTLE LEMON PTOJECT) ------------------------------------ */}
+                    {selectedProject.id === "little_lemon" ?
+                      <ChakraLink
+                        href={selectedProject.projectLink}
+                        isExternal
+                        alignSelf="center"
                         w="100%"
-                        variant="outline"
-                        size={{
-                          base: "md",
-                          md: (isPortrait ? "lg" : "sm"),
-                          lg: "lg"
-                        }}
-                        colorScheme="white"
-                        rightIcon={<ArrowForwardIcon />}
-                        mt="0.7rem"
-                      // bg="red"
                       >
-                        View Full Project
-                      </Button>
-                    </Link>
+                        <Button
+                          w="100%"
+                          variant="outline"
+                          size={{
+                            base: "md",
+                            md: (isPortrait ? "lg" : "sm"),
+                            lg: "lg"
+                          }}
+                          colorScheme="white"
+                          rightIcon={<ArrowForwardIcon />}
+                          mt="0.7rem"
+                        >
+                          Go to Little Lemon
+                        </Button>
+                      </ChakraLink>
+                      :
+                      <Link
+                        to={selectedProject.id}
+                        w="100%"
+                      >
+                        <Button
+                          w="100%"
+                          variant="outline"
+                          size={{
+                            base: "md",
+                            md: (isPortrait ? "lg" : "sm"),
+                            lg: "lg"
+                          }}
+                          colorScheme="white"
+                          rightIcon={<ArrowForwardIcon />}
+                          mt="0.7rem"
+                        >
+                          View Full Project
+                        </Button>
+                      </Link>
+                    }
+                    {/* ------------------------------------------------------------------------------------------ */}
 
                   </Box>
                 </Stack>

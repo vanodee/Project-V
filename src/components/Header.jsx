@@ -9,11 +9,11 @@ export default function Header() {
             as='header'
             position="fixed"
             top="0"
-            width="100%"
+            width={{base:"92%", md:"96%", lg:"98%"}}
             zIndex="999"
             h="7dvh"
             py='0.5rem'
-            px="1rem"
+            mx={{base:"4%", md:"1.5%", lg:"1%"}}
             display="flex"
             justifyContent="space-between"
             // bg="pink"
@@ -26,7 +26,6 @@ export default function Header() {
                     transition="transform 0.3s"
 
                     _hover={{
-                        // bg: "rgba(0, 0, 0, 0.2)",
                         transform: "translateY(5px) translateX(5px) scale(1.2)"
                     }}
                 />

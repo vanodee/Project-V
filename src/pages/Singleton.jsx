@@ -489,7 +489,7 @@ export default function Singleton() {
 
 
                 <ChakraLink
-                    href=""
+                    href="https://www.singletonengagement.online/"
                     isExternal
                     alignSelf="center"
                 >
