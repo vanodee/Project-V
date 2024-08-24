@@ -18,8 +18,8 @@ const colors = {
 const fonts = {
   // body: `'Chakra Petch', sans-serif`,
   // heading: `'Chakra Petch', sans-serif`
-  body: `'Outfit', sans-serif`,
-  heading: `'Outfit', sans-serif`
+  body: `'Outfit Variable', sans-serif`,
+  heading: `'Outfit Variable', sans-serif`
 }
 
 const breakpoints = {
