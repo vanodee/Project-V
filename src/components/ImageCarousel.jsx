@@ -1,9 +1,11 @@
 import { Box, IconButton, Image } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
+import photo1 from "../assets/stevano_1.webp"
 
 
 const myPhotos = [
+    photo1,
     "https://via.placeholder.com/800x400?text=Image+1",
     "https://via.placeholder.com/800x400?text=Image+2",
     "https://via.placeholder.com/800x400?text=Image+3",
@@ -42,9 +44,10 @@ export default function ImageCarousel() {
                 width="100%"
                 height="100%"
                 objectFit="cover"
+                borderRadius="1rem"
             />
 
-            <IconButton
+            {/* <IconButton
                 icon={<ChevronLeftIcon />}
                 position="absolute"
                 top="50%"
@@ -78,7 +81,7 @@ export default function ImageCarousel() {
                     transform: "translateY(-50%) scale(1.5)"
                 }}
                 transition="transform 0.3s"
-            />
+            /> */}
 
         </Box>
     )

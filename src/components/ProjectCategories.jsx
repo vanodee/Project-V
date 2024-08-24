@@ -22,7 +22,7 @@ export default function ProjectCategories({ ...rest }) {
                         px="2rem" //Formerly "1.2rem"
                         py="0.3rem"
                         color='white'
-                        textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                        // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                         borderRadius="0.3rem"
 
                         _activeLink={{
@@ -32,7 +32,7 @@ export default function ProjectCategories({ ...rest }) {
 
                         _hover={{
                             // bg: "rgba(0, 0, 0, 0.2)",
-                            transform: "translateY(-5px) scale(1.2)"
+                            transform: "translateY(-7px) scale(1.2)"
                         }}
 
                         transition= "transform 0.3s"

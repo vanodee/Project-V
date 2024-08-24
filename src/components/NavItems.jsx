@@ -23,7 +23,7 @@ export default function NavItem({ ...rest }) {
                         px="2rem"
                         py="0.3rem"
                         color="white"
-                        textShadow="0px 2px rgba(0, 0, 0, 0.8)"
+                        // textShadow="0px 2px rgba(0, 0, 0, 0.8)"
                         borderRadius="0.3rem"
 
                         _hover={{
@@ -45,7 +45,7 @@ export default function NavItem({ ...rest }) {
                         px="1.2rem"
                         py="0.3rem"
                         color="white"
-                        textShadow="0px 2px rgba(0, 0, 0, 0.8)"
+                        // textShadow="0px 2px rgba(0, 0, 0, 0.8)"
                         borderRadius="0.3rem"
 
                         _activeLink={{

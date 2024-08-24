@@ -132,7 +132,7 @@ export default function Home() {
               <Heading
                 fontSize={{ base: "0.7rem", lg: "1rem" }}
                 color='white'
-                textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 transform='rotate(-90deg)'
                 mx='-1.5rem'
               >
@@ -167,9 +167,9 @@ export default function Home() {
               justifyContent='center'
             >
               <Heading
-                fontSize={{ md: '1rem', lg: '1.3rem' }}
+                fontSize={{ md: '1rem', lg: '1.2rem' }}
                 color='white'
-                textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
               >
                 <ul>
                   <li>Front-End Dev</li>

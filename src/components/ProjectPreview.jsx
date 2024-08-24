@@ -146,7 +146,7 @@ export default function ProjectPreview() {
                     w={isPortrait ? "100%" : "35%"}
                     h={isPortrait ? "50%" : "100%"}
                     color="white"
-                    textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                    // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                     p={{ base: "", lg: "0.5rem" }}
                   // bg="pink"
                   >

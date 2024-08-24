@@ -106,12 +106,12 @@ export default function ProjectsLayout() {
           transform="translate(-50%, -50%)"
           bg='rgba(0,0,0,0.3)'
           backdropFilter='auto'
-          backdropBlur='15px'
+          backdropBlur='20px'
           borderRadius="1rem"
           p="1rem"
           mx="auto"
           textColor="white"
-          textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+          // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
           opacity={navigation.state === "loading" ? "0.3" : "1"}
         >
           <Heading

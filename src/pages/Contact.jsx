@@ -100,7 +100,7 @@ export default function Contact() {
                     md: (isPortrait ? "3rem" : "2rem"),
                     lg: "3rem"
                   }}
-                  textShadow='0px 2px rgba(0, 0, 0, 0.8)'
+                  // textShadow='0px 2px rgba(0, 0, 0, 0.8)'
                 >
                   LET'S CONNECT!
                 </Heading>

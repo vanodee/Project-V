@@ -3,6 +3,7 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import '@fontsource/chakra-petch';
+import '@fontsource-variable/outfit';
 
 
 // Custom Styles ------------------------ //
@@ -15,8 +16,10 @@ const colors = {
 }
 
 const fonts = {
-  body: `'Chakra Petch', sans-serif`,
-  heading: `'Chakra Petch', sans-serif`
+  // body: `'Chakra Petch', sans-serif`,
+  // heading: `'Chakra Petch', sans-serif`
+  body: `'Outfit', sans-serif`,
+  heading: `'Outfit', sans-serif`
 }
 
 const breakpoints = {

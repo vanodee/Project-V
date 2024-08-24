@@ -62,7 +62,7 @@ export default function About() {
           h={isPortrait ? "45%" : "100%"}
           w={isPortrait ? "100%" : "45%"}
           color="white"
-          textShadow="0px 2px rgba(0, 0, 0, 0.8)"
+          // textShadow="0px 2px rgba(0, 0, 0, 0.8)"
         >
           <Heading
             fontSize={{
