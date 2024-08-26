@@ -130,8 +130,7 @@ export default function MyPortfolio() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Hero+Image"
-          // src={projectImages.heroImage}
+          src={projectImages.heroImage}
           sx={sectionImage}
         />
 
@@ -212,8 +211,7 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Animation"
-            // src={projectImages.splashImage}
+            src={projectImages.animation1}
             sx={subSectionImage}
           />
         </VStack>
@@ -227,8 +225,7 @@ export default function MyPortfolio() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Hero"
-          // src={projectImages.researchHero}
+          src={projectImages.hero2}
           sx={sectionImage}
         />
 
@@ -259,8 +256,17 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Logo+Design+Process"
-            // src={projectImages.journeyMap}
+            src={projectImages.logoProcess}
+            sx={subSectionImage}
+          />
+
+          <Image
+            src={projectImages.logoOnWhite}
+            sx={subSectionImage}
+          />
+
+          <Image
+            src={projectImages.logo3d}
             sx={subSectionImage}
           />
 
@@ -292,8 +298,7 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Color+Change+Showcase"
-            // src={projectImages.journeyMap}
+            src={projectImages.animation2}
             sx={subSectionImage}
           />
 
@@ -316,7 +321,7 @@ export default function MyPortfolio() {
             Considering the portfolio would contain projects from various fields, Arranging them was a task that needed to be done with great precision.
             <br />
             <br />
-            I drew inspiration from the UIs of two of my favourite videogames: <em>Apex Legends</em> and <em>The Finals</em>, displaying projects in a central space with tabs for project categories. This minimalist design with semi-glasmorphic elements ensures easy navigation and a clean aesthetic.
+            I drew inspiration from the UIs of two of my favourite videogames: <em>Apex Legends</em> and <em>The Finals</em>, displaying projects in a central space with tabs for project categories. My minimalist approach to this design style ensures easy navigation and an overall clean aesthetic.
           </Text>
         </Stack>
 
@@ -325,8 +330,7 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Apex+Legends"
-            // src={projectImages.journeyMap}
+            src={projectImages.apexImg}
             sx={subSectionImage}
           />
 
@@ -338,8 +342,7 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Finals"
-            // src={projectImages.journeyMap}
+            src={projectImages.finalsImg}
             sx={subSectionImage}
           />
 
@@ -351,8 +354,7 @@ export default function MyPortfolio() {
           sx={subSectionImageContainer}
         >
           <Image
-            src="https://via.placeholder.com/800x400?text=Projects+Section"
-            // src={projectImages.journeyMap}
+            src={projectImages.projectsPage}
             sx={subSectionImage}
           />
 
@@ -388,8 +390,7 @@ export default function MyPortfolio() {
 
 
         <Image //SECTION IMAGE ------------------------------------------------------------------
-          src="https://via.placeholder.com/800x400?text=Section+Hero"
-          // src={projectImages.researchHero}
+          src={projectImages.hero3}
           sx={sectionImage}
         />
 
@@ -429,9 +430,10 @@ export default function MyPortfolio() {
         </Text>
 
 
-        <ChakraLink
-          href=""
-          isExternal
+        <Link
+          // href=""
+          // isExternal
+          to="/"
           alignSelf="center"
         >
           <Button
@@ -441,7 +443,7 @@ export default function MyPortfolio() {
           >
             Explore the Website
           </Button>
-        </ChakraLink>
+        </Link>
 
 
         {/* FOOTER -------------------------------------------------------------------------------------- */}
