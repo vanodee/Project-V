@@ -6,6 +6,7 @@ import whiteEmblem from '../assets/emblem_white.webp'
 export default function ProjectFooter() {
     return (
         <VStack
+            as="footer"
             spacing={10}
             pt="2rem"
         >
