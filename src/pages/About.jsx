@@ -58,7 +58,7 @@ export default function About() {
           backdropFilter='auto'
           backdropBlur='15px'
           borderRadius="1rem"
-          p={{ base: "5%", md: "2%" }}
+          p={{ base: "5%", md: "3%" }}
           h={isPortrait ? "50%" : "100%"}
           w={isPortrait ? "100%" : "45%"}
           color="white"
@@ -77,20 +77,28 @@ export default function About() {
           <Box
             overflow="hidden"
             overflowY="scroll"
+            sx={{
+                "&::-webkit-scrollbar": {
+                  display: "none", // Hide the scrollbar
+                },
+              }}
           >
             <Text
               fontSize="1rem"
             >
-              My name is Stevano Dikedi Peters, and I am a passionate Developer/Designer with a focus on Front-End Development, UI/UX, and Brand Identity Design. My work is driven by a deep appreciation for creativity and a keen interest in all design-related subjects. I thrive on tackling projects that demand innovative problem-solving, aiming to create purposeful and actionable solutions that align with the vision and goals of my clients or the companies I work with, while always keeping the end user in mind.
+              I'm Stevano Peters, a passionate Developer and Designer with a focus on Front-End Development, UI/UX, and Brand Identity Design. I bring ideas to life at the intersection of creativity and functionality, crafting digital experiences that not only look great but feel intuitive and deliver measurable results.
               <br />
               <br />
-              Effective communication and collaboration are at the heart of my design process. I actively engage with clients and project teams throughout every phase, ensuring that the final solution not only meets but exceeds expectations. I am always on the lookout for opportunities to enhance my skills and explore new areas of learning, staying at the forefront of the ever-evolving design industry.
+              With over 5 years of experience, I've had the privilege of designing and developing for startups, agencies, and global brands; leading web design projects for Pretsl (via Peanut Technologies), and building clean, scalable, and user-focused websites using React, Webflow, WordPress, and Toast's POS Website Builder.
               <br />
               <br />
-              When I'm not immersed in the world of design, I channel my creativity into music production, exploring new sonic landscapes and crafting unique compositions. I also find inspiration in video games, whether through team-based experiences like <em>"Apex Legends"</em> and <em>"The Finals"</em> or narrative-driven adventures like <em>"CyberPunk 2077"</em> and <em>"Control."</em>
+              I thrive on collaboration and clear communication, working closely with clients and teams to translate complex goals into actionable, human-centered solutions. Every project I take on is driven by a single question: <em>"How can this design make someone's experience smoother, smarter, or more meaningful?"</em>. 
               <br />
               <br />
-              In summary, I am a dedicated digital designer with a passion for creativity and problem-solving. Specializing in Front-End Development, UI/UX, and Brand Identity Design, I strive to deliver functional and professional solutions that exceed expectations. By fostering open communication and embracing a multidisciplinary approach, I consistently create impactful designs that resonate with clients and users alike.
+              Beyond design, I'm a music producer and creative explorer, constantly inspired by rhythm, storytelling, and visual worlds. Whether I'm designing a brand system, prototyping an interface, or producing a beat, my process is rooted in experimentation, problem-solving, and the pursuit of impact.
+              <br />
+              <br />
+              In essence, I'm a multidisciplinary digital creative who believes great design lives where logic meets emotion. I'm always open to new challenges, collaborations, and opportunities to build products that connect with people and push ideas forward.
 
 
             </Text>
