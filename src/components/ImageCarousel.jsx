@@ -2,10 +2,11 @@ import { Box, IconButton, Image } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 import { useState } from "react";
 import photo1 from "../assets/stevano_1.webp"
+import photo2 from "../assets/stevano_new.webp"
 
 
 const myPhotos = [
-    photo1,
+    photo2,
     "https://via.placeholder.com/800x400?text=Image+1",
     "https://via.placeholder.com/800x400?text=Image+2",
     "https://via.placeholder.com/800x400?text=Image+3",
