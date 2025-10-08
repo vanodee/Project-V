@@ -12,6 +12,7 @@ import {
   keyframes
 } from "@chakra-ui/react"
 import HeroImage2 from '../assets/hero_image_2.webp'
+import HeroImage3 from '../assets/emblem_black.webp'
 import HeroShadow from '../assets/hero_shadow.webp'
 import { ArrowForwardIcon } from "@chakra-ui/icons"
 
@@ -25,6 +26,8 @@ import Photoshop from '../assets/Photoshop.webp'
 import ReactLogo from '../assets/React.webp'
 import VScode from '../assets/VS Code.webp'
 import WordPress from '../assets/WordPress.webp'
+import Webflow from '../assets/webflow.webp'
+import Toast from '../assets/toast.webp'
 import { Link } from "react-router-dom"
 
 
@@ -64,11 +67,13 @@ export default function Home() {
   const toolkitLogos = [
     { id: 1, logo: ReactLogo },
     { id: 2, logo: JavaScript },
-    { id: 3, logo: VScode },
+    // { id: 3, logo: VScode },
     { id: 4, logo: WordPress },
-    { id: 5, logo: Figma },
-    { id: 6, logo: Photoshop },
-    { id: 7, logo: Illustrator },
+    { id: 5, logo: Webflow },
+    { id: 6, logo: Toast },
+    { id: 7, logo: Figma },
+    { id: 8, logo: Photoshop },
+    { id: 9, logo: Illustrator },
   ];
 
 
@@ -88,7 +93,7 @@ export default function Home() {
         // bg={"pink"}
         >
           <Image
-            src={HeroImage2}
+            src={HeroImage3}
             h="90%"
             mb="-1rem"
             animation={`${levitate} 3s ease-in-out infinite`}
@@ -187,30 +192,32 @@ export default function Home() {
             h='100%'
             py='1rem'
           >
-            <Box
+            <Grid
               h='100%'
-              display='flex'
-              flexWrap='wrap'
-              alignItems='center'
-              justifyContent="center"
+              templateColumns={{ base: 'repeat(4, 1fr)' }}
+              gap='1rem'
+              px='1rem'
             >
               {
                 toolkitLogos.map((toolkitLogo) => (
-                  <Image
-                    key={toolkitLogo.id}
-                    src={toolkitLogo.logo}
-                    h={{
-                      base: (isPortrait ? "2rem" : "1.5rem"),
-                      lg: "2rem"
-                    }}
-                    px={{
-                      base: (isPortrait ? "0.3rem" : '0.5rem'),
-                      lg: '1rem'
-                    }}
-                  />
+                  <GridItem
+                    colSpan='1'
+                    display='flex'
+                    alignItems='center'
+                    justifyContent='center'
+                  >
+                    <Image
+                      key={toolkitLogo.id}
+                      src={toolkitLogo.logo}
+                      h={{
+                        base: (isPortrait ? "2rem" : "1.5rem"),
+                        lg: "2rem"
+                      }}
+                    />
+                  </GridItem>
                 ))
               }
-            </Box>
+            </Grid>
           </GridItem>
 
           <GridItem
