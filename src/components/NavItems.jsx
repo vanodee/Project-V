@@ -6,7 +6,7 @@ const links = [
     { id: 1, name: "Home", path: "/" },
     { id: 2, name: "Projects", path: "Projects" },
     { id: 3, name: "About", path: "About" },
-    { id: 4, name: "Resume", path: "https://drive.google.com/file/d/1OfDbp4bgZH9xyV2PkK3bwdprr-5S2IeO/view?usp=sharing" },
+    { id: 4, name: "Resume", path: "https://drive.google.com/file/d/1BWGzFkHhIhSlI-BYySXd3o1inPUDCeAS/view?usp=sharing" },
     { id: 5, name: "Contact", path: "Contact" },
 ];
 
